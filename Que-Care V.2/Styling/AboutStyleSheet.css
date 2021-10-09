@@ -1,0 +1,12 @@
+﻿body {
+}
+.image1 {
+    box-shadow: -5px -5px rgba(77, 116, 179, 0.9);
+    margin: 20px;
+}
+.container{
+    margin-right: 30px;
+    margin-left: 30px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}

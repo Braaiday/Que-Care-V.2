@@ -1,0 +1,57 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title>Que-Care</title>
+    <link href="Styling/NgcaliStyleSheet.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap" rel="stylesheet">
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div>
+        <header>
+                <img src="Images/bandaids.png" />
+                <h1>Que-Care</h1>
+        </header>
+        <nav>
+            <ul>
+                <li>
+                    <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/Home Page.aspx">Home</asp:HyperLink></li>
+                <li>
+                    <asp:HyperLink ID="HyperLink2" runat="server" NavigateUrl="~/About.aspx">About</asp:HyperLink></li>
+                <li>
+                    <asp:HyperLink ID="HyperLink3" runat="server" NavigateUrl="~/ContactUs.aspx">Contact</asp:HyperLink></li>
+                <li>
+                        <asp:HyperLink ID="HyperLink4" runat="server" NavigateUrl="~/Login.aspx" CssClass="login">Login</asp:HyperLink>
+                </li>
+            </ul>
+        </nav>
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        </asp:ContentPlaceHolder>
+        <footer>
+        <div class="fottercon">
+            <div class="left2">
+                <h2>&copy; Copyright Reserved. <p class="Footertext" >Coder and Designer <br>Innovation Developers</p></h2>
+            </div>
+            <div class="right2">
+                <div class="centeralltext">
+                <h3>Important Numbers</h3>
+                <br />
+                Emergency                :       112
+                <br />
+                Ambulance                :       10177
+                <br />
+                Enquiry/Receptionist     :       43955
+                <br />
+                </div>
+            </div>
+        </div>
+        </footer>
+    </div>
+    </form>
+</body>
+</html>

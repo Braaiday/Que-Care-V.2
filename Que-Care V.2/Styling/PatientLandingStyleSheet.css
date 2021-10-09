@@ -1,0 +1,18 @@
+﻿body {
+}
+.PatLand{
+    font-size: 40px;
+}
+.patientinfo {
+    border: 1px solid RGB(204, 218, 240);
+    background-color: RGB(204, 218, 240);
+    margin-top: 20px;
+    font-size: 20px;
+}
+.bluecon {  
+}
+.centerall{
+    width: 500px;
+    margin: auto;
+    padding-top: 30px;
+}

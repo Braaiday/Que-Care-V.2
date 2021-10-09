@@ -1,0 +1,79 @@
+﻿*{
+}
+body {
+}
+h3{
+    font-size: 20px;
+}
+.VirtualTicketForm {
+    width: 500px;
+    margin: auto;
+    border: 1px solid RGB(77, 116, 179);
+    border-radius: 3px 4px;
+    
+    padding-left: 30px;
+    padding-bottom: 30px;
+}
+.VirtualTicketPage .VirtualTicketForm h3 {
+    margin-bottom: 20px;
+    margin-top: 10px;
+}
+.VirtualTicketPage {
+    height: 80%;
+    width: 100%;
+    display: block;
+    margin: auto;
+    align-items: center;
+    justify-content: center;
+}
+.calander {
+    border: 1px solid RGB(77, 116, 179);
+    background-color: RGB(77, 116, 179);
+    width: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+    font-size: 20px;
+}
+.calander2 {
+    border: 1px solid RGB(77, 116, 179);
+    background-color: RGB(77, 116, 179);
+    width: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 20px;
+}
+.control {
+    
+    margin-left: 20px;
+    margin-bottom: 10px;
+    margin-right: 50px;
+ }
+
+.CalanderMain{
+    width: 20%;
+    
+}
+.TimeAndDoctor{
+    display: inline;
+}
+.flexTime{
+    
+}
+.flexDoctor{
+   
+}
+.mylabel{
+    width: 30px;
+    height: 20px;
+}
+.greetings {
+    font-size: 30px;
+    width: 500px;
+    margin: auto;
+    padding-left: 30px;
+    padding-bottom: 30px;
+    padding-top: 30px;
+}
