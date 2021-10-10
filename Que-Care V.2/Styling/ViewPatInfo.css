@@ -1,2 +1,10 @@
 ﻿body {
 }
+.mycenter{
+    padding-top: 5%;
+    padding-left: 20%;
+    width: 2000px;
+}
+.instruct{
+    font-size: 15px;
+}
