@@ -1,9 +1,11 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeFile="SecretaryLanding.aspx.cs" Inherits="_Default" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
+    <link href="Styling/bootstrap.css" rel="stylesheet" />
+    <link href="Styling/SecLanding.css" rel="stylesheet" />
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
-    <div class="container-fluid" style="margin-left: 5px; margin-top: 20px; margin-bottom: 20px">
+    <div class="container-fluid" style="margin-left: 30%; margin-top: 20px; margin-bottom: 20px">
         <div class="row">
             <div class="col-md-5">
                 <div class="card">
@@ -28,28 +30,31 @@
                             </div>
                             <div class="row">
                                 <div class="col-md-6">
-                                    <label>Receptionist Name: <asp:Label ID="Label4" runat="server" Text="Label"></asp:Label></label>
+                                    <label>Name: <asp:Label ID="Label4" runat="server" Text="Label"></asp:Label></label>
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="col-md-6">
-                                    <label>Receptionist Surname: <asp:Label ID="Label5" runat="server" Text="Label"></asp:Label></label>
-                                </div>
-                                <div class="col-md-6">
-                                    <label>Receptionist Street Address: <asp:Label ID="Label6" runat="server" Text="Label"></asp:Label></label>
+                                    <label>Surname: <asp:Label ID="Label5" runat="server" Text="Label"></asp:Label></label>
                                 </div>
                             </div>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                    <label>Street Address: <asp:Label ID="Label6" runat="server" Text="Label"></asp:Label></label>
+                                </div>
+                                </div>
+                            
                             <div class="row">
                                 <div class="col-md-4">
-                                    <label>Receptionist City: <asp:Label ID="Label7" runat="server" Text="Label"></asp:Label></label>
+                                    <label>City: <asp:Label ID="Label7" runat="server" Text="Label"></asp:Label></label>
                                 </div>
                                 <div class="col-10">
-                                    <label>Receptionist Province: <asp:Label ID="Label8" runat="server" Text="Label"></asp:Label></label>
+                                    <label>Province: <asp:Label ID="Label8" runat="server" Text="Label"></asp:Label></label>
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="col">
-                                    <label>Receptionist Cell: <asp:Label ID="Label9" runat="server" Text="Label"></asp:Label></label>
+                                    <label>Cell: <asp:Label ID="Label9" runat="server" Text="Label"></asp:Label></label>
                                 </div>
                             </div>
 
@@ -72,10 +77,15 @@
             </div>
         </div>
         <br>
-        <div class="container">
-            <img src="\Images\receptionist.jpg" class="image1" style="height: 300px; float: initial; width: 80%; margin-left: 40px;" />
+    </div>
+    <div class="container">
+            <img src="\Images\receptionist.jpg" class="image1" style="height: 300px; float: initial; width: 80%; margin-left: 10%;" />
             <br>
         </div>
-    </div>
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
 </asp:Content>
 
