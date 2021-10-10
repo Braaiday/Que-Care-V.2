@@ -3,13 +3,12 @@
 body {
 }
 h3{
-    font-size: 20px;
+    font-size: 40px;
+    padding-left: 20%;
 }
 .VirtualTicketForm {
-    width: 500px;
+    width: 700px;
     margin: auto;
-    border: 1px solid RGB(77, 116, 179);
-    border-radius: 3px 4px;
     
     padding-left: 30px;
     padding-bottom: 30px;
@@ -26,31 +25,28 @@ h3{
     align-items: center;
     justify-content: center;
 }
-.calander {
-    border: 1px solid RGB(77, 116, 179);
-    background-color: RGB(77, 116, 179);
-    width: 300px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: 20px;
+.calander{
+    padding-left: 30%;
+    padding-top: 3px;
+    padding-bottom: 3px;
     font-size: 20px;
 }
 .calander2 {
-    border: 1px solid RGB(77, 116, 179);
-    background-color: RGB(77, 116, 179);
-    width: 300px;
     display: flex;
     align-items: center;
     justify-content: center;
     padding-bottom: 20px;
 }
-.control {
-    
-    margin-left: 20px;
-    margin-bottom: 10px;
-    margin-right: 50px;
+.control1 {
+   margin-left: 30px; 
  }
+.control3 {
+    margin-left: 10px;
+}
+.control2{
+    margin-top: 20px;
+    margin-left: 33%;
+}
 
 .CalanderMain{
     width: 20%;
@@ -68,12 +64,33 @@ h3{
 .mylabel{
     width: 30px;
     height: 20px;
+    font-size: 20px;
 }
 .greetings {
     font-size: 30px;
     width: 500px;
     margin: auto;
-    padding-left: 30px;
-    padding-bottom: 30px;
     padding-top: 30px;
+}
+.ticket{
+    display: flex;
+}
+.left-stuff {
+    flex: 50%;
+    margin-right: 20px;
+    margin-top: 20px;
+    padding-top: 13%;
+    padding-left: 30px;
+    border-radius: 7px 7px;
+    border: 1px solid RGB(77, 116, 179);
+    background-color: RGB(77, 116, 179);
+}
+.right-stuff {
+    flex: 50%;
+    margin-top: 20px;
+    margin-right: 20px;
+    padding: 10px;
+    border-radius: 7px 7px;
+    border: 1px solid RGB(77, 116, 179);
+    background-color: RGB(77, 116, 179);
 }
