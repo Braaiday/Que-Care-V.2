@@ -43,7 +43,7 @@
                             <div class="row">
                                 <div class="col">
                                     <div class="patientinfo">
-        <table>
+        <table class="table d-md-table-cell">
             <tr>
                 <td class="auto-style1"><asp:Label ID="Label1" runat="server" Text="Name:" CssClass="bluecon"></asp:Label></td>
                 <td class="auto-style1"><asp:Label ID="Label2" runat="server" Text="Joe" ></asp:Label></td>
@@ -88,12 +88,12 @@
                             <div class="row">
                                 <div class="col">
                                     <div class="maketicket">
-                                    <p>Need to make a appointment visit the </p>
+                                    <p class="instruct">Need to make a appointment visit the </p>
                                     </div>
 
 
                                     <div class="form-group">
-                                            <a href="VirtualTicket.aspx" class="btn btn-primary">Virtual Ticket Page.</a><br />
+                                            <a href="VirtualTicket.aspx" class="btn btn-primary btn-lg">Virtual Ticket Page.</a><br />
                                             <br>
                                             <br>
                                         </div>
