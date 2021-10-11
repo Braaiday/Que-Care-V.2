@@ -24,7 +24,7 @@ public partial class _Default : System.Web.UI.Page
                 patname = dr[0].ToString();
             }
         }
-        Label21.Text = "Welcome " + patname;
+        Label5.Text = "Welcome " + patname;
 
         string getpatdata = "select P_Name, P_Surname, P_StreetAddress, P_City, P_Province, P_Sex, P_DOB, P_CellNumber, P_Email from Patient where P_Name =" + " '" + patname + "'";
         SqlCommand patdata = new SqlCommand(getpatdata, conn);

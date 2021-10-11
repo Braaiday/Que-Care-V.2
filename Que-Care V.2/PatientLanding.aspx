@@ -12,15 +12,37 @@
         height: 7px;
     }
     </style>
+    <link href="Styling/bootstrap.css" rel="stylesheet" />
     <link href="Styling/PatientLandingStyleSheet.css" rel="stylesheet" />
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
-<div class="centerall">
-<p class="PatLand">
-        <asp:Label ID="Label21" runat="server" Text="Label"></asp:Label>
-</p>
-<p class="PatLand">Here is your personal info</p>
-    <div class="patientinfo">
+    <center>
+        <div class="container-fluid" style="margin-left: 30%; margin-top: 20px; margin-bottom: 20px">
+            <div class="row">
+            <div class="col-md-5">
+                <div class="card">
+                    <div class="card-header" style="background-color: lightsteelblue;">
+                        <div class="card-body">
+                                <div class="col">
+                                    <div class="row">
+                                        <p class="PatLand">
+                                         <asp:Label ID="Label5" runat="server" Text="Label"></asp:Label>
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="row">
+                                        <h4>Here is your personal info</h4>
+                                    </div>
+                                </div>
+                            <div class="row">
+                                <div class="col">
+                                    <hr>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col">
+                                    <div class="patientinfo">
         <table>
             <tr>
                 <td class="auto-style1"><asp:Label ID="Label1" runat="server" Text="Name:" CssClass="bluecon"></asp:Label></td>
@@ -61,9 +83,34 @@
         </table>
     </div>
     <br />
-    <div class="maketicket">
-        <p>Need to make a appointment visit the <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/VirtualTicket.aspx">Virtual Ticket Page</asp:HyperLink>.</p>
-    </div>
-    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col">
+                                    <div class="maketicket">
+                                    <p>Need to make a appointment visit the </p>
+                                    </div>
+
+
+                                    <div class="form-group">
+                                            <a href="VirtualTicketPage.aspx" class="btn btn-primary">Virtual Ticket Page.</a><br />
+                                            <br>
+                                            <br>
+                                        </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </div>
+    </center>
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
 </asp:Content>
 
