@@ -1,7 +1,7 @@
 ﻿body {
 }
 .centerme{
-
+    text-align: center;
 }
 .modifytext{
     font-size: 25px;
