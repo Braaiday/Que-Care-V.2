@@ -93,7 +93,7 @@
 
 
                                     <div class="form-group">
-                                            <a href="VirtualTicketPage.aspx" class="btn btn-primary">Virtual Ticket Page.</a><br />
+                                            <a href="VirtualTicket.aspx" class="btn btn-primary">Virtual Ticket Page.</a><br />
                                             <br>
                                             <br>
                                         </div>
