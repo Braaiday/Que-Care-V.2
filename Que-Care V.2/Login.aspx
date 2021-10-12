@@ -2,6 +2,7 @@
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
     <link href="Styling/LoginStyleSheet.css" rel="stylesheet" />
+    <link href="Styling/bootstrap.css" rel="stylesheet" />
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
 
@@ -22,11 +23,11 @@
         <asp:TextBox ID="txtPassword" runat="server" Width="350px"></asp:TextBox>
         <br />
         <br />
-        <asp:Button ID="btnLogin" runat="server" Text="Login" Width="100px" Height="40px" OnClick="btnLogin_Click" />
+        <asp:Button ID="btnLogin" CssClass="btn btn-primary" runat="server" Text="Login" Width="100px" Height="40px" OnClick="btnLogin_Click" />
         <br />
         <br />
         <br />
-        <p>
+        <p class="big">
             Not yet registered? No worries!
             <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/Register.aspx">Register</asp:HyperLink>.
             Forgot password?
