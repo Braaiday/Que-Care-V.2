@@ -5,7 +5,7 @@
     <link href="Styling/ViewPatInfo.css" rel="stylesheet" />
     </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
-
+<center>
 <div class="container-fluid" style="margin-left: 0%; margin-top: 20px; margin-bottom: 20px">
     <div class="card-header" style="background-color: lightsteelblue;">
         <div class="card-body">
@@ -16,8 +16,6 @@
                       </center>
                   </div>
             </div>
-        </div>
-    </div>
     <div class="row">
         <div class="col">
             <hr>
@@ -33,9 +31,10 @@
                   </div>
    </div>
     <div class="row">
-                  <div class="col">    
+                  <div class="col-md-2">    
                       <center>
-                          <div class="centerme">
+                          <div class="container-fluid" style="margin-left: 275%">
+                              <br />
                                 <asp:TextBox CssClass="form-control" ID="TextBox1" runat="server" placeholder="Name"></asp:TextBox> 
                           </div>
                       </center>
@@ -58,7 +57,6 @@
     </div>
     <div class="row">
          <div class="col">
-             <center>
              <asp:ListView ID="ListView1" runat="server">
                  <AlternatingItemTemplate>
                      <li style="background-color: #FFFFFF;color: #284775;">P_Name:
@@ -220,10 +218,13 @@
                      </li>
                  </SelectedItemTemplate>
              </asp:ListView>
-                 </center>
+                
          </div>
     </div>
+            </div>
+    </div>
 </div>
+  </center>
 
 </asp:Content>
     

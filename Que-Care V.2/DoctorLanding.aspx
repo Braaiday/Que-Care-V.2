@@ -1,6 +1,7 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeFile="DoctorLanding.aspx.cs" Inherits="_Default" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
+    <link href="Styling/DrLandingStylesheet.css" rel="stylesheet" />
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
 
@@ -38,12 +39,11 @@ tr:nth-child(even) {
         <br />
     
         <div class="container">
-            <asp:Label ID="Label1" runat="server" Text="View Your Schedule."></asp:Label>
-        <br />
-        <asp:Button ID="btnDoctorsSchedule" runat="server" CssClass="control" Text="Doctors Schedule" Width="151px" Height="79px"  OnClick="btnDoctorsSchedule_Click" />
-        <asp:Button ID="Button1" runat="server" Width="151px" CssClass="control" Text="Doctor Profile" Height="79px"  OnClick="Button1_Click"/>
-        <br />
-         </div>
+            <br />
+            <asp:Button ID="btnDoctorsSchedule" runat="server" CssClass="btn btn-primary" Text="Doctors Schedule" Width="151px" Height="79px"  OnClick="btnDoctorsSchedule_Click" />
+            <asp:Button ID="Button1" runat="server" Width="151px" CssClass="btn btn-primary" Text="Doctor Profile" Height="79px"  OnClick="Button1_Click"/>
+            <br />
+        </div>
 
 
     </div>

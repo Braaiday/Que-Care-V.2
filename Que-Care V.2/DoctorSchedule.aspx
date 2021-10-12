@@ -1,22 +1,48 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeFile="DoctorSchedule.aspx.cs" Inherits="_Default" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
+    <link href="Styling/bootstrap.css" rel="stylesheet" />
+    <style>
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+    .auto-style1 {
+        box-shadow: -5px -5px rgba(77, 116, 179, 0.9);
+        margin: 20px;
+        width: 1400px;
+        height: 250px;
+    }
+    </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
-    <div class="container" style="text-align: center">
-        <br />
-        <h1>
-            Doctors Patient Schedule</h1>
-        <br />
-        <img src="Images/Schedule.png" class="auto-style1" />
-        <br />
-        <br />
-        <div class="container" style="text-align: left">
-            <br />
-         <div class="container" style="text-align: right">
-            <br />
-     </div>
-           
+    <center>
+     <div class="container-fluid" style="margin-left: 18%; margin-top: 20px; margin-bottom: 20px">
+        <div class="row">
+            <div class="col-md-8">
+                <div class="card">
+                    <div class="card-header" style="background-color: lightsteelblue;">
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="row">
+                                    <h1>Doctors Patient Schedule</h1>
+                                    <img src="Images/Schedule.png" class="auto-style1" />
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="row">
+                                   <div class="container" style="text-align: center">     
             <asp:ListView ID="ListView1" runat="server" allowpaging="true"  >
                 <AlternatingItemTemplate>
                     <tr style="background-color: #FFFFFF;color: #284775;">
@@ -136,47 +162,8 @@
                     </tr>
                 </SelectedItemTemplate>
             </asp:ListView>
-           
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-<style>
-table {
-  font-family: arial, sans-serif;
-  border-collapse: collapse;
-  width: 100%;
-}
-
-td, th {
-  border: 1px solid #dddddd;
-  text-align: left;
-  padding: 8px;
-}
-
-tr:nth-child(even) {
-  background-color: #dddddd;
-}
-    .auto-style1 {
-        box-shadow: -5px -5px rgba(77, 116, 179, 0.9);
-        margin: 20px;
-        width: 1400px;
-        height: 250px;
-    }
-    </style>
-
-<h2>Doctors Schedule</h2>
-
-
-
-
-       
+        <br />
         <asp:HyperLink ID="HyperLink4" runat="server" Font-Size="Larger" NavigateUrl="~/DoctorLanding.aspx">Back to my landing page.</asp:HyperLink>
-            
             <br />
             <br />
         <div class="links" style="text-align: left" margin="margin-left: 20px">
@@ -186,21 +173,22 @@ tr:nth-child(even) {
         <asp:HyperLink ID="HyperLink2" runat="server" NavigateUrl="~/About.aspx">About</asp:HyperLink>
         <br />
         <asp:HyperLink ID="HyperLink3" runat="server" NavigateUrl="~/ContactUs.aspx">Contact</asp:HyperLink>
-    
         </div>
     </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+      </div>
+    </center>
     <br />
-            <br />
     <br />
-            <br />
     <br />
-            <br />
     <br />
-            <br />
     <br />
-            <br />
     <br />
-            <br />
-    </div>
 </asp:Content>
 
