@@ -1,7 +1,6 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeFile="DoctorSchedule.aspx.cs" Inherits="_Default" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
-    <link href="Styling/bootstrap.css" rel="stylesheet" />
     <style>
 table {
   font-family: arial, sans-serif;
@@ -32,7 +31,7 @@ tr:nth-child(even) {
         <div class="row">
             <div class="col-md-8">
                 <div class="card">
-                    <div class="card-header" style="background-color: lightsteelblue;">
+                    <div class="card-header" >
                         <div class="card-body">
                             <div class="row">
                                 <div class="row">
@@ -183,12 +182,6 @@ tr:nth-child(even) {
             </div>
         </div>
       </div>
-    </center>
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
+    </center>   
 </asp:Content>
 

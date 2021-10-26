@@ -1,7 +1,6 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeFile="VirtualTicket.aspx.cs" Inherits="_Default" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
-    <link href="Styling/bootstrap.css" rel="stylesheet" />
     <link href="Styling/VirtualTicketStyleSheet.css" rel="stylesheet" />
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
@@ -12,7 +11,7 @@
         <div class="row">
             <div class="col-md-9">
                 <div class="card">
-                    <div class="card-header" style="background-color: lightsteelblue;">
+                    <div class="card-header" >
                         <div class="card-body">
                             <div class="row">
                                 <div class="col">
@@ -30,7 +29,7 @@
                                     <div class="ticket">
                                     <div class="left-stuff">
                                         <div class="card">
-                                            <div class="card-header" style="background-color: lightsteelblue;">
+                                            <div class="card-header">
                                                 <div class="card-body">
                                     <div class="TimeAndDoctor">
                                     <div class="flexDoctor">
@@ -72,7 +71,7 @@
                                       </div>
                                         <div class="right-stuff">
                                             <div class="card">
-                                            <div class="card-header" style="background-color: lightsteelblue;">
+                                            <div class="card-header">
                                                 <div class="card-body">
                                             <asp:Label ID="Label4" runat="server" Text="Select A Date"></asp:Label><br />
                                             <div class="calander2">
@@ -109,28 +108,6 @@
       </div>
             </div>
         </div>
-    </center>
-
-
-
-
-    
-            
-
-        
-        
-        
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-        
+    </center>   
 </asp:Content>
 

@@ -1,7 +1,6 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeFile="Home Page.aspx.cs" Inherits="_Default" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
-    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap" rel="stylesheet">
     <link href="Styling/HomePageStyleSheet.css" rel="stylesheet" />
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
@@ -30,12 +29,21 @@
       <img class="image1" src="Images/istockphoto-1090425074-612x612.jpg" />
    </figure>
   </section>
-        <br />
+     <br />
      <br />
      <br />
      <br />
      <br />
      <br />
  </main>
+    <br />
+     <br />
+     <br />
+     <br />
+    <br />
+     <br />
+     <br />
+     <br />
+    <br />
 </asp:Content>
 

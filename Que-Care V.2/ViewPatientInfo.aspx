@@ -1,13 +1,12 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeFile="ViewPatientInfo.aspx.cs" Inherits="_Default" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="Server">
-    <link href="Styling/bootstrap.css" rel="stylesheet" />
     <link href="Styling/ViewPatInfo.css" rel="stylesheet" />
     </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
 <center>
 <div class="container-fluid" style="margin-left: 0%; margin-top: 20px; margin-bottom: 20px">
-    <div class="card-header" style="background-color: lightsteelblue;">
+    <div class="card-header">
         <div class="card-body">
             <div class="row">
                   <div class="col">    
@@ -225,7 +224,21 @@
     </div>
 </div>
   </center>
-
+<br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
 </asp:Content>
     
 

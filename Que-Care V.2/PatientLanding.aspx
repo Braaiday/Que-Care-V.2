@@ -12,7 +12,7 @@
         height: 7px;
     }
     </style>
-    <link href="Styling/bootstrap.css" rel="stylesheet" />
+    
     <link href="Styling/PatientLandingStyleSheet.css" rel="stylesheet" />
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
@@ -21,7 +21,7 @@
             <div class="row">
             <div class="col-md-5">
                 <div class="card">
-                    <div class="card-header" style="background-color: lightsteelblue;">
+                    <div class="card-header" >
                         <div class="card-body">
                                 <div class="col">
                                     <div class="row">
@@ -106,11 +106,5 @@
             </div>
         </div>
     </center>
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
 </asp:Content>
 

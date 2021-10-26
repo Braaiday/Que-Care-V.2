@@ -1,7 +1,6 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeFile="DoctorProfile.aspx.cs" Inherits="_Default" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
-    <link href="Styling/bootstrap.css" rel="stylesheet" />
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
     <style>
@@ -29,7 +28,7 @@ tr:nth-child(even) {
         <div class="row">
             <div class="col-md-5">
                 <div class="card">
-                     <div class="card-header" style="background-color: lightsteelblue;">
+                     <div class="card-header">
                         <div class="row">
                             <div class="col">
                                 <h1>Doctors Profile</h1>
@@ -98,5 +97,13 @@ tr:nth-child(even) {
         </div>
     </div>
    </center> 
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
 </asp:Content>
 

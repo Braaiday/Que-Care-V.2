@@ -1,7 +1,6 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeFile="SecretaryLanding.aspx.cs" Inherits="_Default" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
-    <link href="Styling/bootstrap.css" rel="stylesheet" />
     <link href="Styling/SecLanding.css" rel="stylesheet" />
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
@@ -9,7 +8,7 @@
         <div class="row">
             <div class="col-md-5">
                 <div class="card">
-                    <div class="card-header" style="background-color: lightsteelblue;">
+                    <div class="card-header" >
                         <div class="card-body">
                             <div class="row">
                                 <div class="col">
@@ -82,10 +81,5 @@
             <img src="\Images\receptionist.jpg" class="image1" style="height: 300px; float: initial; width: 80%; margin-left: 10%;" />
             <br>
         </div>
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
 </asp:Content>
 
