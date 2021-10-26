@@ -1,13 +1,8 @@
 ﻿body {
 }
 .error {
-    width: 200px;
-    height: 150px;
-    border: 1px solid RGB(77, 116, 179);
-    background-color: RGB(77, 116, 179);
-    color: maroon;
-    border-radius: 3px 4px;
-    padding: 20px;
+    color: red;  
+    font-size: 20px;
 }
 .temp {
     width: 400px;
