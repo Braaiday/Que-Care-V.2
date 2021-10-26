@@ -11,7 +11,7 @@
         <div class="row cold-md-6 cold-md-offset-3">
             <div class="card card-primary">
                 <div class="card-heading text-center">
-                    <h1>Registration</h1>
+                    <h1>Patient Registration</h1>
                 </div>
                 <div class="card-body">
                     <div class="container">
