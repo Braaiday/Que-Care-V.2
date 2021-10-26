@@ -20,7 +20,7 @@
         <asp:Label ID="lblPassword" runat="server" Text="Password"></asp:Label>
         <br />
         <br />
-        <asp:TextBox ID="txtPassword" runat="server" Width="350px"></asp:TextBox>
+        <asp:TextBox ID="txtPassword" TextMode="Password" runat="server" Width="350px"></asp:TextBox>
         <br />
         <br />
         <asp:Button ID="btnLogin" CssClass="btn btn-primary" runat="server" Text="Login" Width="100px" Height="40px" OnClick="btnLogin_Click" />

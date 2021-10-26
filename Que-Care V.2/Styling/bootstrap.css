@@ -3949,6 +3949,9 @@ textarea.form-control-lg {
   text-align: center;
 }
 
+.form-group {
+    margin-bottom: 1rem;
+}
 .nav-fill .nav-item .nav-link,
 .nav-justified .nav-item .nav-link {
   width: 100%;
