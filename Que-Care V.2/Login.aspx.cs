@@ -5,19 +5,20 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Data.SqlClient;
+using System.Configuration;
 
 public partial class _Default : System.Web.UI.Page
 {
-    SqlConnection conn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\QueCare.mdf;Integrated Security=True;MultipleActiveResultSets=True");
+    string connection = ConfigurationManager.ConnectionStrings["QueCareConnectionString"].ConnectionString;
+
     protected void Page_Load(object sender, EventArgs e)
     {
-        
-        conn.Open();
-        
     }
 
     protected void btnLogin_Click(object sender, EventArgs e)
     {
+        SqlConnection conn = new SqlConnection(connection);
+        conn.Open();
         int found = 0;
         string username = txtUsername.Text;
         Session["Username"] = username;
@@ -70,7 +71,11 @@ public partial class _Default : System.Web.UI.Page
                 }
             }
         }
-        if (found == 0)
+        if (username == "admin" && password == "12345")
+        {
+            Response.Redirect("~/AdminLanding.aspx");
+        }
+        else if (found == 0)
         {
             Label1.Visible = true;
         }

@@ -5,6 +5,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Data.SqlClient;
+using System.Configuration;
 
 public partial class _Default : System.Web.UI.Page
 {
@@ -15,7 +16,8 @@ public partial class _Default : System.Web.UI.Page
 
     protected void Button2_Click(object sender, EventArgs e)
     {
-        SqlConnection conn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\QueCare.mdf;Integrated Security=True;MultipleActiveResultSets=True");
+        string connection = ConfigurationManager.ConnectionStrings["QueCareConnectionString"].ConnectionString;
+        SqlConnection conn = new SqlConnection(connection);
         conn.Open();
         string patname = TextBox1.Text;
         string getpatdata = "select P_Name, P_Surname, P_StreetAddress, P_City, P_Province, P_Sex, P_DOB, P_CellNumber, P_Email from Patient where P_Name =" + " '" + patname + "'";

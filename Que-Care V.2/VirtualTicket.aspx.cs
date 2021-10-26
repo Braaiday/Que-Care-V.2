@@ -5,13 +5,16 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Data.SqlClient;
+using System.Configuration;
 
 public partial class _Default : System.Web.UI.Page
 {
-    SqlConnection conn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\QueCare.mdf;Integrated Security=True;MultipleActiveResultSets=True");
+    
     protected void Page_Load(object sender, EventArgs e)
     {
         ///Creating Connection to database
+        string connection = ConfigurationManager.ConnectionStrings["QueCareConnectionString"].ConnectionString;
+        SqlConnection conn = new SqlConnection(connection);
         conn.Open();
 
         ///Getting Patient Name
@@ -64,6 +67,9 @@ public partial class _Default : System.Web.UI.Page
 
     protected void Button1_Click1(object sender, EventArgs e)
     {
+
+        string connection = ConfigurationManager.ConnectionStrings["QueCareConnectionString"].ConnectionString;
+        SqlConnection conn = new SqlConnection(connection);
         ///Example of structure of time and date in database
         ///Date = 2021/09/09 00:00:00
         ///time = 2021/09/09 15:00:00

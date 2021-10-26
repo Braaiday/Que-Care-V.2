@@ -6,6 +6,7 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Data.SqlClient;
 using System.Data;
+using System.Configuration;
 
 public partial class _Default : System.Web.UI.Page
 {
@@ -14,8 +15,8 @@ public partial class _Default : System.Web.UI.Page
         string username = "";
         int docID = 0;
         username = Session["Username"].ToString();
-        
-        SqlConnection conn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\QueCare.mdf;Integrated Security=True;MultipleActiveResultSets=True");
+        string connection = ConfigurationManager.ConnectionStrings["QueCareConnectionString"].ConnectionString;
+        SqlConnection conn = new SqlConnection(connection);
         conn.Open();
         string getID = "select Doc_ID from Doctor where Doc_UserName =" + " '" + username + "'";
         SqlCommand gettingID = new SqlCommand(getID, conn);

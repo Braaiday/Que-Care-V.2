@@ -5,6 +5,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Data.SqlClient;
+using System.Configuration;
 
 public partial class _Default : System.Web.UI.Page
 {
@@ -23,7 +24,8 @@ public partial class _Default : System.Web.UI.Page
 
     protected void Page_Load(object sender, EventArgs e)
     {
-        SqlConnection conn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\QueCare.mdf;Integrated Security=True;MultipleActiveResultSets=True");
+        string connection = ConfigurationManager.ConnectionStrings["QueCareConnectionString"].ConnectionString;
+        SqlConnection conn = new SqlConnection(connection);
         conn.Open();
         string checksize = "select count(*) from Patient";
         SqlCommand size = new SqlCommand(checksize, conn);
@@ -50,7 +52,8 @@ public partial class _Default : System.Web.UI.Page
         email = txtRegisterEmail.Text;
         username = txtUsername.Text;
         password = txtRegisterPassword.Text;
-        SqlConnection conn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\QueCare.mdf;Integrated Security=True;MultipleActiveResultSets=True");
+        string connection = ConfigurationManager.ConnectionStrings["QueCareConnectionString"].ConnectionString;
+        SqlConnection conn = new SqlConnection(connection);
         conn.Open();
         string query = "Insert into Patient(P_ID,P_Name,P_Surname,P_StreetAddress,P_City,P_Province,P_Sex,P_DOB,P_CellNumber,P_Email,P_UserName,P_Password)Values(@P_ID,@P_Name,@P_Surname,@P_StreetAddress,@P_City,@P_Province,@P_Sex,@P_DOB,@P_CellNumber,@P_Email,@P_UserName,@P_Password)";
         SqlCommand command = new SqlCommand(query, conn);
