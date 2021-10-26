@@ -1,0 +1,11 @@
+﻿body {
+}
+.mystuff{
+    display: flex;
+}
+.leftstuff{
+    flex: 50%;
+}
+.rightstuff{
+    flex: 50%;
+}
