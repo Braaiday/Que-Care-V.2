@@ -81,5 +81,7 @@
             <img src="\Images\receptionist.jpg" class="image1" style="height: 300px; float: initial; width: 80%; margin-left: 10%;" />
             <br>
         </div>
+    <br />
+    <br />
 </asp:Content>
 
