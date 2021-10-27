@@ -14,21 +14,21 @@
           <div class="carousel-inner">
             <div class="carousel-item active">
               <img src="Images/About01.jpg" class="d-block w-100" alt="...">
-                <div class="carousel-caption d-none d-md-block">
+                <div class="carousel-caption d-none d-md-block" style="background-color: RGBA(0,0,0,0.15)">
                 <h5>What we do?</h5>
                 <p>We assist hospitals to minimize patient queues with our Que-Care system.</p>
               </div>
             </div>
             <div class="carousel-item">
               <img src="Images/About02.jpg" class="d-block w-100" alt="...">
-                <div class="carousel-caption d-none d-md-block">
+                <div class="carousel-caption d-none d-md-block" style="background-color: RGBA(0,0,0,0.1)">
                 <h5>What we do?</h5>
                 <p>Que-Care is a vitual ticketing system, which allows patients to queue for doctor assistance at the comfort of their homes.</p>
               </div>
             </div>
             <div class="carousel-item">
               <img src="Images/About03.jpg" class="d-block w-100" alt="...">
-                <div class="carousel-caption d-none d-md-block">
+                <div class="carousel-caption d-none d-md-block" style="background-color: RGBA(0,0,0,0.1)">
                 <h5>What we do?</h5>
                 <p>Say no to long hospital queues.</p>
               </div>

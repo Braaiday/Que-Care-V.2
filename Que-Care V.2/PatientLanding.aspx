@@ -1,23 +1,11 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeFile="PatientLanding.aspx.cs" Inherits="_Default" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
-    <style type="text/css">
-        .auto-style1 {
-            height: 20px;
-        }
-    .auto-style2 {
-        height: 25px;
-    }
-    .auto-style3 {
-        height: 7px;
-    }
-    </style>
-    
-    <link href="Styling/PatientLandingStyleSheet.css" rel="stylesheet" />
+ <link href="Styling/PatientLandingStyleSheet.css" rel="stylesheet" />
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
     <center>
-        <div class="container-fluid" style="margin-left: 30%; margin-top: 20px; margin-bottom: 20px">
+        <div class="container-fluid" style="margin-left: 30%; margin-top: 20px; margin-bottom: 20px;">
             <div class="row">
             <div class="col-md-5">
                 <div class="card">
@@ -83,20 +71,47 @@
         </table>
     </div>
     <br />
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col">
-                                    <div class="maketicket">
-                                    <p class="instruct">Need to make a appointment visit the </p>
+                                    <div class="maketicket" id="MakeTicket" runat="server" visible="false">
+                                                        <p class="instruct">Need to make a appointment visit the virtual ticket page.</p>
+                                                        <div class="form-group">
+                                                                <a href="VirtualTicket.aspx" class="btn btn-primary btn-lg">Virtual Ticket Page.</a><br />
+                                                                <br>
+                                                                <br>
+                                                            </div>
                                     </div>
-
-
-                                    <div class="form-group">
-                                            <a href="VirtualTicket.aspx" class="btn btn-primary btn-lg">Virtual Ticket Page.</a><br />
-                                            <br>
-                                            <br>
-                                        </div>
+                                    <div class="maketicket" id="HaveTicket" runat="server" visible="false">
+                                        <p class="instruct">Or view your tickets.</p>
+                                             <div class="form-group">
+                                                 <asp:Button CssClass="btn btn-danger btn-lg" ID="Button1" runat="server" Text="View your ticket." OnClick="Button1_Click" />
+                                                 <br>
+                                                 <br>
+                                             </div>
+                                    </div>
+                                    <div runat="server" id="Ticket" class="card text-white bg-danger mb-3" style="max-width: 40rem;" visible="false">
+                                      <div class="card-header">Your Ticket</div>
+                                          <div class="card-body">
+                                            <h4 class="card-title">Here is your ticket info</h4>
+                                            <table>
+                                                <tbody>
+                                                <tr class="table-danger">
+                                                    <th scope="row">Ticket&nbsp;&nbsp;&nbsp;&nbsp;</th>
+                                                    <td>Ticket Time&nbsp;&nbsp;&nbsp;&nbsp; </td>
+                                                    <td>Ticket Date&nbsp;&nbsp;&nbsp;&nbsp; </td>
+                                                    <td>Doctor&nbsp;&nbsp;&nbsp;&nbsp;  </td>
+                                                </tr>
+                                                <tr class="table-danger">
+                                                    <td></td>
+                                                    <td>
+                                                        <asp:Label ID="Label6" runat="server" Text="Label"></asp:Label></td>
+                                                    <td>
+                                                        <asp:Label ID="Label21" runat="server" Text="Label"></asp:Label></td>
+                                                    <td>
+                                                        <asp:Label ID="Label22" runat="server" Text="Label"></asp:Label></td>
+                                                </tr>
+                                                </tbody>
+                                            </table>
+                                          </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -105,6 +120,7 @@
             </div>
             </div>
         </div>
+        
     </center>
 </asp:Content>
 

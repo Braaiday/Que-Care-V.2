@@ -74,11 +74,15 @@ public partial class _Default : System.Web.UI.Page
         ///Date = 2021/09/09 00:00:00
         ///time = 2021/09/09 15:00:00
         //Getting some Ticket information from web form
+        conn.Open();
         string Date = Calendar1.SelectedDate.ToString();
         string Doctor = DropDownList1.Text;
         string time = Date.Substring(0,11) + DropDownList2.Text + ":00";
-        string symptoms = TextBox1.Text;
-
+        string symptoms = yoursymptoms.Value; /// Here we are
+        if (symptoms == "")
+        {
+            symptoms = "Not dislosed.";
+        }
 
         //Getting Patient ID
         string username = Session["Username"].ToString();

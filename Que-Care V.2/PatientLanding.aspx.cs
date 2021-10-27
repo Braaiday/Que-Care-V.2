@@ -11,6 +11,7 @@ public partial class _Default : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
+       ///Here we are loading patient info
         string username = "";
         string patname = "";
         username = Session["Username"].ToString();
@@ -45,5 +46,77 @@ public partial class _Default : System.Web.UI.Page
                 Label20.Text = dr[8].ToString();
             }
         }
+        //Loading patient people end.
+
+        //Now we need to set the visibility of make ticket or show ticket, to stop users from making more than one ticket
+        int P_ID = 0;
+        string getNamepat = "select P_ID from Patient where P_UserName =" + " '" + username + "'";
+        SqlCommand SQLname = new SqlCommand(getNamepat, conn);
+        using (SqlDataReader dr = SQLname.ExecuteReader())
+        {
+            while (dr.Read())
+            {
+                P_ID = int.Parse(dr[0].ToString());
+            }
+        }
+        string seeStatus = "select count(P_ID) from VirtualTicket where P_ID=" + " '" + P_ID + "'";
+        SqlCommand findticket = new SqlCommand(seeStatus, conn);
+        using (SqlDataReader dr = findticket.ExecuteReader())
+        {
+            while (dr.Read())
+            {
+                if (dr[0].ToString() == "0")
+                {
+                    MakeTicket.Visible = true;
+                }
+                else
+                {
+                    HaveTicket.Visible = true;
+                    
+                }
+            }
+        }
+    }
+
+    protected void Button1_Click(object sender, EventArgs e)
+    {
+        string username = "";
+        int P_ID = 0;
+        username = Session["Username"].ToString();
+        string connection = ConfigurationManager.ConnectionStrings["QueCareConnectionString"].ConnectionString;
+        SqlConnection conn = new SqlConnection(connection);
+        conn.Open();
+
+
+        string getNamepat = "select P_ID from Patient where P_UserName =" + " '" + username + "'";
+        SqlCommand SQLname = new SqlCommand(getNamepat, conn);
+        using (SqlDataReader dr = SQLname.ExecuteReader())
+        {
+            while (dr.Read())
+            {
+                P_ID = int.Parse(dr[0].ToString());
+            }
+        }
+
+
+        string getTicketInfo = "select Ticket_Time, Ticket_Date, Doc_Name from VirtualTicket, Doctor where VirtualTicket.P_ID=" + " '" + P_ID + "' and VirtualTicket.Doc_ID = Doctor.Doc_ID";
+        SqlCommand ticketinfo = new SqlCommand(getTicketInfo, conn);
+        using (SqlDataReader dr = ticketinfo.ExecuteReader())
+        {
+            while (dr.Read())
+            {
+                Label6.Text = dr[0].ToString();
+                Label6.Text = Label6.Text.Remove(0, 10);
+                Label21.Text = dr[1].ToString();
+                Label21.Text = Label21.Text.Remove(11, 8);
+                Label22.Text = dr[2].ToString();
+            }
+        }
+        ///Example of structure of time and date in database
+        ///Date = 2021/09/09 00:00:00
+        ///time = 2021/09/09 15:00:00
+        //Getting some Ticket information from web form
+
+        Ticket.Visible = true;
     }
 }

@@ -31,13 +31,13 @@
                                         <div class="card">
                                             <div class="card-header">
                                                 <div class="card-body">
-                                    <div class="TimeAndDoctor">
-                                    <div class="flexDoctor">
-                                        <asp:Label ID="Label1" runat="server" Text="Doctor" CssClass="mylabel"></asp:Label>
-                                        <asp:DropDownList ID="DropDownList1" runat="server" font-size="25px" Height="45px" Width="150px" CssClass="control1">
-                                        </asp:DropDownList>
-                                    </div>
-                                    <br />
+                                                <div class="TimeAndDoctor">
+                                                <div class="flexDoctor">
+                                                    <asp:Label ID="Label1" runat="server" Text="Doctor" CssClass="mylabel"></asp:Label>
+                                                    <asp:DropDownList ID="DropDownList1" runat="server" font-size="25px" Height="45px" Width="150px" CssClass="control1">
+                                                    </asp:DropDownList>
+                                                </div>
+                                                <br />
                                         <asp:Label ID="Label2" runat="server" Text="Time Slot" CssClass="mylabel"></asp:Label>
                                         <asp:DropDownList ID="DropDownList2" runat="server" font-size="25px" CssClass="control3" Height="45px" Width="150px">
                                             <asp:ListItem>06:00</asp:ListItem>
@@ -61,9 +61,9 @@
                                         </asp:DropDownList>
                                         <br />
                                         <br />
-                                        <asp:Label ID="Label5" CssClass="mylabel" runat="server" Text="Describe your symptoms"></asp:Label>
+                                        <asp:Label ID="Label5" CssClass="mylabel" runat="server" Text="Describe your symptoms.(Optional)"></asp:Label>
                                             <br />
-                                            <asp:TextBox ID="TextBox1" runat="server" Height="96px" Width="221px"></asp:TextBox>
+                                            <textarea runat="server" class="form-control" id="yoursymptoms" rows="3" style="width:20rem"></textarea>
                                         </div>
                                     </div>
                                                 </div>
@@ -93,11 +93,11 @@
                             <div class="row">
                                 <div class="col">
                                     <p class="Links">Or see.</p>
-        <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/Home Page.aspx">Home</asp:HyperLink>
-        <br />
-        <asp:HyperLink ID="HyperLink2" runat="server" NavigateUrl="~/About.aspx">About</asp:HyperLink>
-        <br />
-        <asp:HyperLink ID="HyperLink3" runat="server" NavigateUrl="~/ContactUs.aspx">Contact</asp:HyperLink>
+                                        <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/Home Page.aspx">Home</asp:HyperLink>
+                                        <br />
+                                        <asp:HyperLink ID="HyperLink2" runat="server" NavigateUrl="~/About.aspx">About</asp:HyperLink>
+                                        <br />
+                                        <asp:HyperLink ID="HyperLink3" runat="server" NavigateUrl="~/ContactUs.aspx">Contact</asp:HyperLink>
                                 </div>
                             </div>
                         </div>
