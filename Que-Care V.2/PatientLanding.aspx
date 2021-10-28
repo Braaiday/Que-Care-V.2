@@ -149,8 +149,8 @@
                                                             </div>
                                                         </div>
 
-                                                         <asp:LinkButton ID="lnkDelete" runat="server" CssClass="btn btn-danger" OnClientClick="return getConfirmation(this, 'Please confirm','Are you sure you want to delete your ticket?');"  OnClick="lnkDelete_Click"><i class="glyphicon glyphicon-trash"></i>&nbsp;Delete</asp:LinkButton>          <br />                                         
-                                                    </div>
+                                                <asp:LinkButton ID="lnkDelete" runat="server" CssClass="btn btn-danger" OnClientClick="return getConfirmation(this, 'Please confirm','Are you sure you want to delete your ticket?');"  OnClick="lnkDelete_Click"><i class="glyphicon glyphicon-trash"></i>&nbsp;Cancel</asp:LinkButton>          <br />                                         
+                                         </div>
                                     </div>
                                     </div>
                                     
