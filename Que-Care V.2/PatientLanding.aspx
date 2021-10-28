@@ -2,6 +2,20 @@
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
  <link href="Styling/PatientLandingStyleSheet.css" rel="stylesheet" />
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+
+    <script type="text/javascript">
+        function getConfirmation(sender, title, message) {
+            $("#spnTitle").text(title);
+            $("#spnMsg").text(message);
+            $('#modalPopUp').modal('show');
+            $('#btnConfirm').attr('onclick', "$('#modalPopUp').modal('hide');setTimeout(function(){" + $(sender).prop('href') + "}, 50);");
+            return false;
+        }
+    </script>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
     <center>
@@ -80,14 +94,12 @@
                                                             </div>
                                     </div>
                                     <div class="maketicket" id="HaveTicket" runat="server" visible="false">
-                                        <p class="instruct">Or view your tickets.</p>
                                              <div class="form-group">
-                                                 <asp:Button CssClass="btn btn-danger btn-lg" ID="Button1" runat="server" Text="View your ticket." OnClick="Button1_Click" />
+                                                 <asp:Button CssClass="btn btn-success btn-lg" ID="Button1" runat="server" Text="View your ticket." OnClick="Button1_Click" />
                                                  <br>
                                                  <br>
                                              </div>
-                                    </div>
-                                    <div runat="server" id="Ticket" class="card text-white bg-danger mb-3" style="max-width: 40rem;" visible="false">
+                                        <div runat="server" id="Ticket" class="card text-white bg-success mb-3" style="max-width: 40rem;" visible="false">
                                       <div class="card-header">Your Ticket</div>
                                           <div class="card-body">
                                             <h4 class="card-title">Here is your ticket info</h4>
@@ -99,7 +111,7 @@
                                                     <td>Ticket Date&nbsp;&nbsp;&nbsp;&nbsp; </td>
                                                     <td>Doctor&nbsp;&nbsp;&nbsp;&nbsp;  </td>
                                                 </tr>
-                                                <tr class="table-danger">
+                                                <tr class="table-primary">
                                                     <td></td>
                                                     <td>
                                                         <asp:Label ID="Label6" runat="server" Text="Label"></asp:Label></td>
@@ -111,7 +123,37 @@
                                                 </tbody>
                                             </table>
                                           </div>
+                                        <div>          
+                                                        <div id="modalPopUp" class="modal fade" role="dialog">
+                                                            <div class="modal-dialog">
+                                                                <div class="modal-content">
+                                                                    <div class="modal-header">
+                                                                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                                                        <h4 class="modal-title">
+                                                                            <span id="spnTitle">
+                                                                            </span>
+                                                                        </h4>
+                                                                    </div>
+                                                                    <div class="modal-body">
+                                                                        <p>
+                                                                            <span id="spnMsg">
+                                                                            </span>                                .
+                                                                        </p>
+                                                                    </div>
+                                                                    <div class="modal-footer">
+                                                                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                                                        <button type="button" id="btnConfirm" class="btn btn-danger">
+                                                                            Yes, please</button>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                         <asp:LinkButton ID="lnkDelete" runat="server" CssClass="btn btn-danger" OnClientClick="return getConfirmation(this, 'Please confirm','Are you sure you want to delete your ticket?');"  OnClick="lnkDelete_Click"><i class="glyphicon glyphicon-trash"></i>&nbsp;Delete</asp:LinkButton>          <br />                                         
+                                                    </div>
                                     </div>
+                                    </div>
+                                    
                                 </div>
                             </div>
                         </div>

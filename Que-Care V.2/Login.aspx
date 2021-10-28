@@ -11,6 +11,7 @@
         <div class="card">
             <div class="card-body justify-content-center">
                  <h1>Login</h1>
+                    <hr />
                     <br />
                     <br />
                     <asp:Label ID="lblUsername" runat="server" Text="Username"></asp:Label>

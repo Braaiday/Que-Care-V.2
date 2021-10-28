@@ -9,6 +9,7 @@ using System.Configuration;
 
 public partial class _Default : System.Web.UI.Page
 {
+    int P_ID = 0;
     protected void Page_Load(object sender, EventArgs e)
     {
        ///Here we are loading patient info
@@ -49,7 +50,7 @@ public partial class _Default : System.Web.UI.Page
         //Loading patient people end.
 
         //Now we need to set the visibility of make ticket or show ticket, to stop users from making more than one ticket
-        int P_ID = 0;
+        
         string getNamepat = "select P_ID from Patient where P_UserName =" + " '" + username + "'";
         SqlCommand SQLname = new SqlCommand(getNamepat, conn);
         using (SqlDataReader dr = SQLname.ExecuteReader())
@@ -81,22 +82,13 @@ public partial class _Default : System.Web.UI.Page
     protected void Button1_Click(object sender, EventArgs e)
     {
         string username = "";
-        int P_ID = 0;
         username = Session["Username"].ToString();
         string connection = ConfigurationManager.ConnectionStrings["QueCareConnectionString"].ConnectionString;
         SqlConnection conn = new SqlConnection(connection);
         conn.Open();
 
 
-        string getNamepat = "select P_ID from Patient where P_UserName =" + " '" + username + "'";
-        SqlCommand SQLname = new SqlCommand(getNamepat, conn);
-        using (SqlDataReader dr = SQLname.ExecuteReader())
-        {
-            while (dr.Read())
-            {
-                P_ID = int.Parse(dr[0].ToString());
-            }
-        }
+       
 
 
         string getTicketInfo = "select Ticket_Time, Ticket_Date, Doc_Name from VirtualTicket, Doctor where VirtualTicket.P_ID=" + " '" + P_ID + "' and VirtualTicket.Doc_ID = Doctor.Doc_ID";
@@ -118,5 +110,17 @@ public partial class _Default : System.Web.UI.Page
         //Getting some Ticket information from web form
 
         Ticket.Visible = true;
+    }
+    protected void lnkDelete_Click(object sender, EventArgs e)
+    {
+        //Write the code here to delete the record
+        string deleteticket = "delete from VirtualTicket where P_ID =" + " '" + P_ID + "'";
+        string connection = ConfigurationManager.ConnectionStrings["QueCareConnectionString"].ConnectionString;
+        SqlConnection conn = new SqlConnection(connection);
+        conn.Open();
+        SqlCommand deleterecord = new SqlCommand(deleteticket, conn);
+        deleterecord.ExecuteNonQuery();
+        MakeTicket.Visible = true;
+        HaveTicket.Visible = false;
     }
 }

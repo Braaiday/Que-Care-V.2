@@ -55,27 +55,31 @@ public partial class _Default : System.Web.UI.Page
         email = txtRegisterEmail.Text;
         username = txtUsername.Text;
         password = txtRegisterPassword.Text;
-        string connection = ConfigurationManager.ConnectionStrings["QueCareConnectionString"].ConnectionString;
-        SqlConnection conn = new SqlConnection(connection);
-        conn.Open();
-        string query = "Insert into Patient(P_ID,P_Name,P_Surname,P_StreetAddress,P_City,P_Province,P_Sex,P_DOB,P_CellNumber,P_Email,P_UserName,P_Password)Values(@P_ID,@P_Name,@P_Surname,@P_StreetAddress,@P_City,@P_Province,@P_Sex,@P_DOB,@P_CellNumber,@P_Email,@P_UserName,@P_Password)";
-        SqlCommand command = new SqlCommand(query, conn);
-        command.Parameters.AddWithValue("P_ID", ID);
-        command.Parameters.AddWithValue("P_Name", name);
-        command.Parameters.AddWithValue("P_Surname", surname);
-        command.Parameters.AddWithValue("P_StreetAddress", street);
-        command.Parameters.AddWithValue("P_City", city);
-        command.Parameters.AddWithValue("P_Province", province);
-        command.Parameters.AddWithValue("P_Sex", sex);
-        command.Parameters.AddWithValue("P_DOB", DOB);
-        command.Parameters.AddWithValue("P_CellNumber", cell);
-        command.Parameters.AddWithValue("P_Email", email);
-        command.Parameters.AddWithValue("P_UserName", username);
-        command.Parameters.AddWithValue("P_Password", password);
-        command.ExecuteNonQuery();
-        conn.Close();
-        Session["Username"] = username;
-        Server.Transfer("PatientLanding.aspx");
+        if ((RequiredFieldValidator10.IsValid == true) && (RequiredFieldValidator1.IsValid == true) && (RequiredFieldValidator2.IsValid == true) && (RequiredFieldValidator3.IsValid == true) && (RequiredFieldValidator4.IsValid == true) && (RequiredFieldValidator7.IsValid == true) && (RequiredFieldValidator8.IsValid == true) && (RequiredFieldValidator9.IsValid == true) && (CompareValidator1.IsValid == true)) 
+        {
+            string connection = ConfigurationManager.ConnectionStrings["QueCareConnectionString"].ConnectionString;
+            SqlConnection conn = new SqlConnection(connection);
+            conn.Open();
+            string query = "Insert into Patient(P_ID,P_Name,P_Surname,P_StreetAddress,P_City,P_Province,P_Sex,P_DOB,P_CellNumber,P_Email,P_UserName,P_Password)Values(@P_ID,@P_Name,@P_Surname,@P_StreetAddress,@P_City,@P_Province,@P_Sex,@P_DOB,@P_CellNumber,@P_Email,@P_UserName,@P_Password)";
+            SqlCommand command = new SqlCommand(query, conn);
+            command.Parameters.AddWithValue("P_ID", ID);
+            command.Parameters.AddWithValue("P_Name", name);
+            command.Parameters.AddWithValue("P_Surname", surname);
+            command.Parameters.AddWithValue("P_StreetAddress", street);
+            command.Parameters.AddWithValue("P_City", city);
+            command.Parameters.AddWithValue("P_Province", province);
+            command.Parameters.AddWithValue("P_Sex", sex);
+            command.Parameters.AddWithValue("P_DOB", DOB);
+            command.Parameters.AddWithValue("P_CellNumber", cell);
+            command.Parameters.AddWithValue("P_Email", email);
+            command.Parameters.AddWithValue("P_UserName", username);
+            command.Parameters.AddWithValue("P_Password", password);
+            command.ExecuteNonQuery();
+            conn.Close();
+            Session["Username"] = username;
+            Server.Transfer("PatientLanding.aspx");
+        }
+        
     }
 
     protected void txtRegisterUsername_TextChanged(object sender, EventArgs e)
