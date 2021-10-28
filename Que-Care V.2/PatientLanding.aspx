@@ -99,29 +99,39 @@
                                                  <br>
                                                  <br>
                                              </div>
-                                        <div runat="server" id="Ticket" class="card text-white bg-success mb-3" style="max-width: 40rem;" visible="false">
+                                        <div runat="server" id="Ticket" class="card text-white bg-success mb-3" style="max-width: 30rem;" visible="false">
                                       <div class="card-header">Your Ticket</div>
                                           <div class="card-body">
                                             <h4 class="card-title">Here is your ticket info</h4>
-                                            <table>
-                                                <tbody>
-                                                <tr class="table-danger">
-                                                    <th scope="row">Ticket&nbsp;&nbsp;&nbsp;&nbsp;</th>
-                                                    <td>Ticket Time&nbsp;&nbsp;&nbsp;&nbsp; </td>
-                                                    <td>Ticket Date&nbsp;&nbsp;&nbsp;&nbsp; </td>
-                                                    <td>Doctor&nbsp;&nbsp;&nbsp;&nbsp;  </td>
-                                                </tr>
-                                                <tr class="table-primary">
-                                                    <td></td>
-                                                    <td>
-                                                        <asp:Label ID="Label6" runat="server" Text="Label"></asp:Label></td>
-                                                    <td>
-                                                        <asp:Label ID="Label21" runat="server" Text="Label"></asp:Label></td>
-                                                    <td>
-                                                        <asp:Label ID="Label22" runat="server" Text="Label"></asp:Label></td>
-                                                </tr>
-                                                </tbody>
-                                            </table>
+                                              <table style="min-width: 15rem">
+                                                  
+                                                  <tr>
+                                                      <td>
+                                                         Ticket Time
+                                                      </td>
+                                                      <td>
+                                                          <asp:Label ID="Label6" runat="server" Text="Label"></asp:Label>
+                                                      </td>
+                                                  </tr>
+
+                                                  <tr>
+                                                      <td>
+                                                          Ticket Date
+                                                      </td>
+                                                      <td>
+                                                          <asp:Label ID="Label21" runat="server" Text="Label"></asp:Label>
+                                                      </td>
+                                                  </tr>
+
+                                                  <tr>
+                                                      <td>
+                                                          Doctor
+                                                      </td>
+                                                      <td>
+                                                          <asp:Label ID="Label22" runat="server" Text="Label"></asp:Label>
+                                                      </td>
+                                                  </tr>
+                                              </table>
                                           </div>
                                         <div>          
                                                         <div id="modalPopUp" class="modal fade" role="dialog">
@@ -149,7 +159,9 @@
                                                             </div>
                                                         </div>
 
-                                                <asp:LinkButton ID="lnkDelete" runat="server" CssClass="btn btn-danger" OnClientClick="return getConfirmation(this, 'Please confirm','Are you sure you want to delete your ticket?');"  OnClick="lnkDelete_Click"><i class="glyphicon glyphicon-trash"></i>&nbsp;Cancel</asp:LinkButton>          <br />                                         
+                                                <asp:LinkButton ID="lnkDelete" runat="server" CssClass="btn btn-danger" OnClientClick="return getConfirmation(this, 'Please confirm','Are you sure you want to delete your ticket?');"  OnClick="lnkDelete_Click"><i class="glyphicon glyphicon-trash"></i>&nbsp;Cancel</asp:LinkButton>          
+                                            <br />       
+                                            <br />
                                          </div>
                                     </div>
                                     </div>

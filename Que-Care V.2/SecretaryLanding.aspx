@@ -1,10 +1,9 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeFile="SecretaryLanding.aspx.cs" Inherits="_Default" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
-    
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
-    <div class="container-fluid" style="margin-left: 30%; margin-top: 20px; margin-bottom: 20px">
+    <div class="container-fluid" style="margin-left: 30%; margin-top: 20px; margin-bottom: 20px; min-width:90rem; width: 110rem;">
         <div class="row">
             <div class="col-md-5">
                 <div class="card">
@@ -56,17 +55,33 @@
                                     <label>Cell: <asp:Label ID="Label9" runat="server" Text="Label"></asp:Label></label>
                                 </div>
                             </div>
-
-
+                            <br />
+                            <br />
                             <div class="row">
                                 <div class="col-8 mx-auto">
                                     <center>
-                                        <div class="form-group">
-                                            <a href="ViewPatientInfo.aspx" class="btn btn-primary">View Patient Info</a><br />
-                                            <br>
-                                            <br>
-                                            <a href="Home Page.aspx"><< Back to Home</a>
+                                        <div class="card text-white bg-secondary mb-3" style="max-width: 20rem;">
+                                          <div class="card-header">Find Patient</div>
+                                          <div class="card-body">
+                                            <h4 class="card-title">Search the system for patient information</h4>
+                                            <div class="form-group">
+                                                <a href="ViewPatientInfo.aspx" class="btn btn-primary">View Patient Info</a><br />
+                                                <br>
+                                                <br>
+                                            </div>
+                                          </div>
                                         </div>
+                                    </center>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col">
+                                    <center>
+                                        <br />
+                                          <img src="\Images\receptionist.jpg"  style="max-width: 30rem"/>
+                                          <br>
+                                          <br />
+                                        <a href="Home Page.aspx"><< Back to Home</a>
                                     </center>
                                 </div>
                             </div>
@@ -77,10 +92,6 @@
         </div>
         <br>
     </div>
-    <div class="container">
-            <img src="\Images\receptionist.jpg" class="image1" style="height: 300px; float: initial; width: 80%; margin-left: 10%;" />
-            <br>
-        </div>
     <br />
     <br />
 </asp:Content>
