@@ -133,7 +133,7 @@
                                                   </tr>
                                               </table>
                                           </div>
-                                        <div>          
+                                        <div id="model">          
                                                         <div id="modalPopUp" class="modal fade" role="dialog">
                                                             <div class="modal-dialog">
                                                                 <div class="modal-content">
@@ -159,7 +159,7 @@
                                                             </div>
                                                         </div>
 
-                                                <asp:LinkButton ID="lnkDelete" runat="server" CssClass="btn btn-danger" OnClientClick="return getConfirmation(this, 'Please confirm','Are you sure you want to delete your ticket?');"  OnClick="lnkDelete_Click"><i class="glyphicon glyphicon-trash"></i>&nbsp;Cancel</asp:LinkButton>          
+                                                <asp:LinkButton ID="lnkDelete" runat="server" CssClass="btn btn-danger" OnClientClick="return getConfirmation(this, 'Please confirm','Are you sure you want to cancel your ticket?');"  OnClick="lnkDelete_Click"><i class="glyphicon glyphicon-trash"></i>&nbsp;Cancel</asp:LinkButton>          
                                             <br />       
                                             <br />
                                          </div>

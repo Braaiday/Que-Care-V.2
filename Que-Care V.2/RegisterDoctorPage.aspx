@@ -110,7 +110,8 @@
                                                                 </div>
                                                             </div>
                                                         </div>
-                                                <asp:LinkButton ID="btnRegister" runat="server" Text="Register" CssClass="btn btn-primary"  OnClientClick="return getConfirmation(this, 'Added','Doctor  has been added to the database succesfully');" OnClick="btnRegister_Click" Height="45px" Width="126px" ><i class="glyphicon glyphicon-trash"></i>&nbsp;Register</asp:LinkButton>                           
+
+                                                <asp:LinkButton ID="btnRegister" runat="server" CssClass="btn btn-primary"  OnClientClick="return getConfirmation(this, 'Added','Doctor  has been added to the database succesfully');" OnClick="btnRegister_Click" Height="45px" Width="126px" ><i class="glyphicon glyphicon-trash"></i>&nbsp;Register</asp:LinkButton>                           
                                          </div>
                             <br />
                         </div>

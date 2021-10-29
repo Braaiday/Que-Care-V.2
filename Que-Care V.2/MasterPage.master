@@ -50,29 +50,76 @@
 </nav>
   <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
   </asp:ContentPlaceHolder>
-        <footer style="margin-top: auto; width: 100%;">
-            <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-                <div class="container-fluid">
-                    <div class="fottercon" style="display: flex">
-                    <div class="left2" style="flex: 50%">
-                        <h2>&copy; Copyright Reserved. Coder and Designer Innovation Developers</h2>
-                    </div>
-                    <div class="right2" style="flex: 50%">
-                        
-                        <h3>Important Numbers</h3>
-                        <br />
-                        Emergency                :       112
-                        <br />
-                        Ambulance                :       10177
-                        <br />
-                        Enquiry/Receptionist     :       43955
-                        <br />
-                        
+                <footer id="footer" class="footer-1 bg-secondary">
+                    <div class="main-footer widgets-dark typo-light">
+                    <div class="container">
+                    <div class="row">
+  
+                    <div class="col-xs-12 col-sm-6 col-md-3">
+                    <div class="widget subscribe no-box">
+                    <h5 class="widget-title">Que-Care<span></span></h5>
+                    <p>Your all in one stop for booking appointments.</p>
                     </div>
                     </div>
-                </div>
-            </nav>
-        </footer>
+
+                    <div class="col-xs-12 col-sm-6 col-md-3">
+                    <div class="widget no-box">
+                    <h5 class="widget-title">Quick Links<span></span></h5>
+                    <ul class="thumbnail-widget">
+                    <li>
+                    <div class="thumb-content"><a href="Home Page.aspx">Home</a></div> 
+                    </li>
+                    <li>
+                    <div class="thumb-content"><a href="About.aspx">About</a></div> 
+                    </li>
+                    <li>
+                    <div class="thumb-content"><a href="ContactUs.aspx">Contact</a></div> 
+                    </li>
+                    <li>
+                    <div class="thumb-content"><a href="Login.aspx">Login</a></div> 
+                    </li>
+                     
+                    </ul>
+                    </div>
+                    </div>
+
+                    <div class="col-xs-12 col-sm-6 col-md-3">
+                    <div class="widget no-box">
+                    <h5 class="widget-title">Get Started<span></span></h5>
+                    <p>Get access to our ticketing system.</p>
+                    <a class="btn btn-primary" href="Register.aspx" target="_blank">Register Now</a>
+                    </div>
+                    </div>
+
+                    <div class="col-xs-12 col-sm-6 col-md-3">
+
+                    <div class="widget no-box">
+                    <h5 class="widget-title">Contact Us<span></span></h5>
+
+                    <p>Important Numbers</p>
+                    <ul class="social-footer2" style="list-style: none">
+                        <li><p>Emergency : <span style="text-decoration: underline; color: lightblue">112</span></p></li>
+                        <li><p>Ambulance : <span style="text-decoration: underline; color: lightblue">10177</span></p></li>
+                        <li><p>Enquiry : <span style="text-decoration: underline; color: lightblue">43955</span></p></li>
+                    </ul>
+                    </div>
+                    </div>
+
+                    </div>
+                    </div>
+                    </div>
+  
+                    <div class="footer-copyright">
+                    <div class="container">
+                    <div class="row">
+                    <div class="col-md-12 text-center">
+                    <p>Copyright Innovation Developers © 2021. All rights reserved.</p>
+                    </div>
+                    </div>
+                    </div>
+                    </div>
+                   </footer>
+       
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
