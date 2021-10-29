@@ -51,10 +51,13 @@
   <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
   </asp:ContentPlaceHolder>
                 <footer id="footer" class="footer-1 bg-secondary">
+                    <br />
+                    <center>
+                        <hr style="width: 90%;"/>
+                    </center>
                     <div class="main-footer widgets-dark typo-light">
                     <div class="container">
                     <div class="row">
-  
                     <div class="col-xs-12 col-sm-6 col-md-3">
                     <div class="widget subscribe no-box">
                     <h5 class="widget-title"><img style="height: 50px; width: 50px" src="Images/bandaids.png" />Que-Care<span></span></h5>
