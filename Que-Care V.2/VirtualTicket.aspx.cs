@@ -12,6 +12,7 @@ public partial class _Default : System.Web.UI.Page
     
     protected void Page_Load(object sender, EventArgs e)
     {
+        ValidationSettings.UnobtrusiveValidationMode = UnobtrusiveValidationMode.None;
         ///Creating Connection to database
         string connection = ConfigurationManager.ConnectionStrings["QueCareConnectionString"].ConnectionString;
         SqlConnection conn = new SqlConnection(connection);
@@ -60,98 +61,105 @@ public partial class _Default : System.Web.UI.Page
     }
 
 
-    protected void Calendar1_SelectionChanged(object sender, EventArgs e)
-    {
-
-    }
+   
 
     protected void Button1_Click1(object sender, EventArgs e)
     {
-
-        string connection = ConfigurationManager.ConnectionStrings["QueCareConnectionString"].ConnectionString;
-        SqlConnection conn = new SqlConnection(connection);
-        ///Example of structure of time and date in database
-        ///Date = 2021/09/09 00:00:00
-        ///time = 2021/09/09 15:00:00
-        //Getting some Ticket information from web form
-        conn.Open();
-        string Date = Calendar1.SelectedDate.ToString();
-        string Doctor = DropDownList1.Text;
-        string time = Date.Substring(0,11) + DropDownList2.Text + ":00";
-        string symptoms = yoursymptoms.Value; /// Here we are
-        if (symptoms == "")
+        if (RequiredFieldValidator1.IsValid == true)
         {
-            symptoms = "Not dislosed.";
-        }
-
-        //Getting Patient ID
-        string username = Session["Username"].ToString();
-        int P_ID = 0;
-        string getNamepat = "select P_ID from Patient where P_UserName =" + " '" + username + "'";
-        SqlCommand SQLname = new SqlCommand(getNamepat, conn);
-        using (SqlDataReader dr = SQLname.ExecuteReader())
-        {
-            while (dr.Read())
+            string connection = ConfigurationManager.ConnectionStrings["QueCareConnectionString"].ConnectionString;
+            SqlConnection conn = new SqlConnection(connection);
+            ///Example of structure of time and date in database
+            ///Date = 2021/09/09 00:00:00
+            ///time = 2021/09/09 15:00:00
+            //Getting some Ticket information from web form
+            conn.Open();
+            string Date = Calendar1.SelectedDate.ToString();
+            string Doctor = DropDownList1.Text;
+            string time = Date.Substring(0, 11) + DropDownList2.Text + ":00";
+            string symptoms = yoursymptoms.Value; /// Here we are
+            if (symptoms == "")
             {
-                P_ID = int.Parse(dr[0].ToString());
-            }
-        }
-
-
-        //Getting Selected Doctor ID
-        int Doc_ID = 0;
-        string getName = "select Doc_ID from Doctor where Doc_Name = '" + Doctor + "'";
-        SqlCommand name = new SqlCommand(getName, conn);
-        using (SqlDataReader dr2 = name.ExecuteReader())
-        {
-            while (dr2.Read())
-            {
-                Doc_ID = int.Parse(dr2[0].ToString());
+                symptoms = "Not dislosed.";
             }
 
-        }
-        //Assigning the ticket to a Receptionist randomly
-        string receptCount = "select count(*) from Receptionist";
-        SqlCommand CountDoctors = new SqlCommand(receptCount, conn);
-        int Recept_ID = 0;
-        using (SqlDataReader dr1 = CountDoctors.ExecuteReader())
-        {
-            int size = 0;
-            while (dr1.Read())
+            //Getting Patient ID
+            string username = Session["Username"].ToString();
+            int P_ID = 0;
+            string getNamepat = "select P_ID from Patient where P_UserName =" + " '" + username + "'";
+            SqlCommand SQLname = new SqlCommand(getNamepat, conn);
+            using (SqlDataReader dr = SQLname.ExecuteReader())
             {
-                size = int.Parse(dr1[0].ToString());
+                while (dr.Read())
+                {
+                    P_ID = int.Parse(dr[0].ToString());
+                }
+            }
+
+
+            //Getting Selected Doctor ID
+            int Doc_ID = 0;
+            string getName = "select Doc_ID from Doctor where Doc_Name = '" + Doctor + "'";
+            SqlCommand name = new SqlCommand(getName, conn);
+            using (SqlDataReader dr2 = name.ExecuteReader())
+            {
+                while (dr2.Read())
+                {
+                    Doc_ID = int.Parse(dr2[0].ToString());
+                }
 
             }
-            Random random = new Random();
-            Recept_ID = random.Next(1, size + 1);
-
-            
-        }
-
-        //Getting Ticket Count and adding plus 1 for getting ID for new ticket
-        int Ticket_ID = 0;
-        string getTicketCount = "select count(*) from VirtualTicket";
-        SqlCommand getticketcount = new SqlCommand(getTicketCount,conn);
-        using (SqlDataReader dr = getticketcount.ExecuteReader())
-        {
-            while (dr.Read())
+            //Assigning the ticket to a Receptionist randomly
+            string receptCount = "select count(*) from Receptionist";
+            SqlCommand CountDoctors = new SqlCommand(receptCount, conn);
+            int Recept_ID = 0;
+            using (SqlDataReader dr1 = CountDoctors.ExecuteReader())
             {
-                Ticket_ID = int.Parse(dr[0].ToString()) + 1;
+                int size = 0;
+                while (dr1.Read())
+                {
+                    size = int.Parse(dr1[0].ToString());
+
+                }
+                Random random = new Random();
+                Recept_ID = random.Next(1, size + 1);
+
+
             }
+
+            //Getting Ticket Count and adding plus 1 for getting ID for new ticket
+            int Ticket_ID = 0;
+            string getTicketCount = "select count(*) from VirtualTicket";
+            SqlCommand getticketcount = new SqlCommand(getTicketCount, conn);
+            using (SqlDataReader dr = getticketcount.ExecuteReader())
+            {
+                while (dr.Read())
+                {
+                    Ticket_ID = int.Parse(dr[0].ToString()) + 1;
+                }
+            }
+            ///Code for adding ticket to database
+
+            string query = "Insert into VirtualTicket(Ticket_ID,Ticket_Time,Ticket_Date,Symptoms,P_ID,Recept_ID,Doc_ID)Values(@Ticket_ID,@Ticket_Time,@Ticket_Date,@Symptoms,@P_ID,@Recept_ID,@Doc_ID)";
+            SqlCommand command = new SqlCommand(query, conn);
+            command.Parameters.AddWithValue("Ticket_ID", Ticket_ID);
+            command.Parameters.AddWithValue("Ticket_Time", time);
+            command.Parameters.AddWithValue("Ticket_Date", Date);
+            command.Parameters.AddWithValue("Symptoms", symptoms);
+            command.Parameters.AddWithValue("P_ID", P_ID);
+            command.Parameters.AddWithValue("Recept_ID", Recept_ID);
+            command.Parameters.AddWithValue("Doc_ID", Doc_ID);
+            command.ExecuteNonQuery();
+            conn.Close();
+            Server.Transfer("PatientLanding.aspx");
         }
-        ///Code for adding ticket to database
         
-        string query = "Insert into VirtualTicket(Ticket_ID,Ticket_Time,Ticket_Date,Symptoms,P_ID,Recept_ID,Doc_ID)Values(@Ticket_ID,@Ticket_Time,@Ticket_Date,@Symptoms,@P_ID,@Recept_ID,@Doc_ID)";
-        SqlCommand command = new SqlCommand(query, conn);
-        command.Parameters.AddWithValue("Ticket_ID", Ticket_ID);
-        command.Parameters.AddWithValue("Ticket_Time", time);
-        command.Parameters.AddWithValue("Ticket_Date", Date);
-        command.Parameters.AddWithValue("Symptoms", symptoms);
-        command.Parameters.AddWithValue("P_ID", P_ID);
-        command.Parameters.AddWithValue("Recept_ID", Recept_ID);
-        command.Parameters.AddWithValue("Doc_ID", Doc_ID);
-        command.ExecuteNonQuery();
-        conn.Close();
-        Server.Transfer("PatientLanding.aspx");
+    }
+
+    
+
+    protected void Calendar1_SelectionChanged1(object sender, EventArgs e)
+    {
+        TextBox1.Text = Calendar1.SelectedDate.ToString();
     }
 }

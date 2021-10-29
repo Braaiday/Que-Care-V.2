@@ -34,12 +34,12 @@
                                                 <div class="TimeAndDoctor">
                                                 <div class="flexDoctor">
                                                     <asp:Label ID="Label1" runat="server" Text="Doctor" CssClass="mylabel"></asp:Label>
-                                                    <asp:DropDownList ID="DropDownList1" runat="server" font-size="25px" Height="45px" Width="150px" CssClass="control1">
+                                                    <asp:DropDownList ID="DropDownList1" runat="server" font-size="25px" Height="45px" Width="150px" CssClass="form-control">
                                                     </asp:DropDownList>
                                                 </div>
                                                 <br />
                                         <asp:Label ID="Label2" runat="server" Text="Time Slot" CssClass="mylabel"></asp:Label>
-                                        <asp:DropDownList ID="DropDownList2" runat="server" font-size="25px" CssClass="control3" Height="45px" Width="150px">
+                                        <asp:DropDownList ID="DropDownList2" runat="server" font-size="25px" CssClass="form-control" Height="45px" Width="150px">
                                             <asp:ListItem>06:00</asp:ListItem>
                                             <asp:ListItem>06:30</asp:ListItem>
                                             <asp:ListItem>07:00</asp:ListItem>
@@ -70,12 +70,16 @@
                                             </div>
                                       </div>
                                         <div class="right-stuff">
-                                            <div class="card">
+                                            <div class="card" style="min-width: 10rem">
                                             <div class="card-header">
                                                 <div class="card-body">
-                                            <asp:Label ID="Label4" runat="server" Text="Select A Date"></asp:Label><br />
-                                            <div class="calander2">
-                                                <asp:Calendar ID="Calendar1" runat="server" Height="240px" Width="268px"></asp:Calendar>
+                                            <asp:Label ID="Label4" runat="server" CssClass="text-lg-center" Text="Select A Date"></asp:Label><br />
+                                            <div class="calander2" style="max-width: 18rem">
+                                                <asp:Calendar ID="Calendar1" runat="server" CssClass="form-control"  OnSelectionChanged="Calendar1_SelectionChanged1">
+                                                </asp:Calendar>
+                                                <asp:TextBox ID="TextBox1" runat="server" Visible="false"></asp:TextBox>
+                                                <br />
+                                                <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ForeColor="Red" ErrorMessage="Please pick a date" ControlToValidate="TextBox1"></asp:RequiredFieldValidator>
                                             </div>
                                             </div>
                                             </div>
