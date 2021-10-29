@@ -39,7 +39,7 @@ public partial class _Default : System.Web.UI.Page
                 ID = int.Parse(dr[0].ToString()) + 1;
             }
         }
-        
+        conn.Close();
      }
 
     protected void btnRegister_Click(object sender, EventArgs e)

@@ -77,6 +77,7 @@ public partial class _Default : System.Web.UI.Page
                 }
             }
         }
+        conn.Close();
     }
 
     protected void Button1_Click(object sender, EventArgs e)
@@ -108,7 +109,7 @@ public partial class _Default : System.Web.UI.Page
         ///Date = 2021/09/09 00:00:00
         ///time = 2021/09/09 15:00:00
         //Getting some Ticket information from web form
-
+        conn.Close();
         Ticket.Visible = true;
     }
     protected void lnkDelete_Click(object sender, EventArgs e)
@@ -122,5 +123,6 @@ public partial class _Default : System.Web.UI.Page
         deleterecord.ExecuteNonQuery();
         MakeTicket.Visible = true;
         HaveTicket.Visible = false;
+        conn.Close();
     }
 }

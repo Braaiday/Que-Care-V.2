@@ -95,7 +95,7 @@ public partial class _Default : System.Web.UI.Page
                 }
             }
         }
-        
+        conn.Close();
     }
     protected void btnRegister_Click(object sender, EventArgs e)
     {

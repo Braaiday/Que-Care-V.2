@@ -27,6 +27,7 @@ public partial class _Default : System.Web.UI.Page
             }
         }
         Label2.Text = docname;
+        conn.Close();
     }
 
     protected void btnDoctorsSchedule_Click(object sender, EventArgs e)

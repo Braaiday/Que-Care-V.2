@@ -45,5 +45,6 @@ public partial class _Default : System.Web.UI.Page
                 Label6.Text = dr[5].ToString();
             }
         }
+        conn.Close();
     }
 }

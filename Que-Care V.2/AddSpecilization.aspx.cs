@@ -27,6 +27,7 @@ public partial class Default2 : System.Web.UI.Page
                 ID = int.Parse(dr[0].ToString()) + 1;
             }
         }
+        conn.Close();
     }
 
     protected void btnAddSpecialization_Click(object sender, EventArgs e)
@@ -47,5 +48,6 @@ public partial class Default2 : System.Web.UI.Page
             conn.Close();
             Server.Transfer("AdminLanding.aspx");
         }
+        conn.Close();
     }
 }

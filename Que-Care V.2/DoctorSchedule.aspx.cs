@@ -33,7 +33,7 @@ public partial class _Default : System.Web.UI.Page
         doctor.ExecuteNonQuery();
         ListView1.DataSource = doctor.ExecuteReader();
         ListView1.DataBind();
-
+        conn.Close();
 
 
     }

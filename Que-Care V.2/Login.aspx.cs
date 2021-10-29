@@ -92,7 +92,7 @@ public partial class _Default : System.Web.UI.Page
         {
             myErrorMessage = "For Username, please insert a string. For Password, please insert an integer.*";
         }
-       
 
+        conn.Close();
     }
 }
