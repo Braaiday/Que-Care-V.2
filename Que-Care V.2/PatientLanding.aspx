@@ -133,7 +133,7 @@
                                                   </tr>
                                               </table>
                                           </div>
-                                        <div id="model">          
+                                        <div id="modal">          
                                                         <div id="modalPopUp" class="modal fade" role="dialog">
                                                             <div class="modal-dialog">
                                                                 <div class="modal-content">

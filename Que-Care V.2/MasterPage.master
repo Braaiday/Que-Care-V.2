@@ -21,33 +21,33 @@
 <body>
     <form id="form1" runat="server">
         <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="#"><img style="height: 50px; width: 50px" src="Images/bandaids.png" />Que-Care</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
+          <div class="container-fluid">
+            <a class="navbar-brand" href="#"><img style="height: 50px; width: 50px" src="Images/bandaids.png" />Que-Care</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
 
-    <div class="collapse navbar-collapse" id="navbarColor01">
-      <ul class="navbar-nav me-auto">
-        <li class="nav-item">
+            <div class="collapse navbar-collapse" id="navbarColor01">
+              <ul class="navbar-nav me-auto">
+                <li class="nav-item">
 
-          <a class="nav-link active" href="Home Page.aspx">Home
-            <span class="visually-hidden">(current)</span>
-          </a>
-        </li>
-          <li class="nav-item">
-          <a class="nav-link" href="About.aspx">About</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="ContactUs.aspx">Contact</a>
-        </li>
-      </ul>
-        <div class="d-flex">
-            <a href="Login.aspx" class="btn btn-primary btn-lg my-2 my-sm-0">Login</a><br /> 
-        </div>
-    </div>
-  </div>
-</nav>
+                  <a class="nav-link active" href="Home Page.aspx">Home
+                    <span class="visually-hidden">(current)</span>
+                  </a>
+                </li>
+                  <li class="nav-item">
+                  <a class="nav-link" href="About.aspx">About</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="ContactUs.aspx">Contact</a>
+                </li>
+              </ul>
+                <div class="d-flex">
+                    <a href="Login.aspx" class="btn btn-primary btn-lg my-2 my-sm-0">Login</a><br /> 
+                </div>
+            </div>
+          </div>
+        </nav>
   <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
   </asp:ContentPlaceHolder>
                 <footer id="footer" class="footer-1 bg-secondary">
@@ -57,7 +57,7 @@
   
                     <div class="col-xs-12 col-sm-6 col-md-3">
                     <div class="widget subscribe no-box">
-                    <h5 class="widget-title">Que-Care<span></span></h5>
+                    <h5 class="widget-title"><img style="height: 50px; width: 50px" src="Images/bandaids.png" />Que-Care<span></span></h5>
                     <p>Your all in one stop for booking appointments.</p>
                     </div>
                     </div>
