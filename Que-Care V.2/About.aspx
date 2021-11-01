@@ -5,6 +5,10 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
     <br />
     <center>
+        <br />
+        <br />
+        <br />
+        <br />
           <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel" style="width: 60rem; max-width: 40rem; max-height: 30rem">
           <div class="carousel-indicators">
             <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -48,11 +52,7 @@
     <br />
     <br />
     <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
+   
+    
 </asp:Content>
 
