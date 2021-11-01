@@ -57,6 +57,17 @@
                             </tr>
                             
                         </table>
+                        <div class="card text-white bg-secondary mb-3" style="max-width: 60rem; min-height: 30em; margin: 20px;">
+                            <div class="card-header">Reports</div>
+                             <div class="card-body">
+                                 <h4 class="card-title">Here are some statistics</h4>
+                                 <table>
+                                     <tr>
+
+                                     </tr>
+                                 </table>
+                             </div>
+                        </div>
                     </div>
                     <div class="card-footer text-right">
                         &copy; Que-Care
