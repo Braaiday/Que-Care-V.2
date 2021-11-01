@@ -1,7 +1,9 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeFile="AdminLanding.aspx.cs" Inherits="_Default" %>
 
+<%@ Register Assembly="System.Web.DataVisualization, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" Namespace="System.Web.UI.DataVisualization.Charting" TagPrefix="asp" %>
+
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
-    <link href="Styling/RegistrationStyleSheet.css" rel="stylesheet" />
+    <script src="Javascript/PieChart.js"></script>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
     <br />
@@ -63,7 +65,36 @@
                                  <h4 class="card-title">Here are some statistics</h4>
                                  <table>
                                      <tr>
-
+                                         <th>
+                                             <asp:Chart ID="Chart1" runat="server">
+                                                 <Series>
+                                                     <asp:Series Name="Series1" ChartType="Pie"></asp:Series>
+                                                 </Series>
+                                                 <ChartAreas>
+                                                     <asp:ChartArea Name="ChartArea1"></asp:ChartArea>
+                                                 </ChartAreas>
+                                             </asp:Chart>
+                                         </th>
+                                         <th>
+                                             <asp:Chart ID="Chart2" runat="server">
+                                                 <Series>
+                                                     <asp:Series Name="Series1" ChartType="Pie"></asp:Series>
+                                                 </Series>
+                                                 <ChartAreas>
+                                                     <asp:ChartArea Name="ChartArea1"></asp:ChartArea>
+                                                 </ChartAreas>
+                                             </asp:Chart>
+                                         </th>
+                                         <th>
+                                             <asp:Chart ID="Chart3" runat="server">
+                                                 <Series>
+                                                     <asp:Series Name="Series1" ChartType="Pie"></asp:Series>
+                                                 </Series>
+                                                 <ChartAreas>
+                                                     <asp:ChartArea Name="ChartArea1"></asp:ChartArea>
+                                                 </ChartAreas>
+                                             </asp:Chart>
+                                         </th>
                                      </tr>
                                  </table>
                              </div>
