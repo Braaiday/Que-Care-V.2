@@ -1,49 +1,60 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeFile="ContactUs.aspx.cs" Inherits="_Default" %>
 
-<asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="Server">
 </asp:Content>
-<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
-    <div class="container" style="text-align: center">
-        <br />
-        <h1>Please fill in the form to connect with us.</h1>
-        <br />
-        <br />
-        <h5>Required fields are marked with an asterisk (*).</h5>
-        <br />
-        <br />
-        <asp:Label ID="lblFullName" runat="server" Text="Fullname* :"></asp:Label>
-        <asp:TextBox ID="txtFulName" runat="server" Width="350px"></asp:TextBox>
-        <br />
-        <br />
-        <asp:Label ID="lblEmailAddress" runat="server" Text="Email Address* :"></asp:Label>
-        <asp:TextBox ID="txtEmailAddress" runat="server" Width="350px"></asp:TextBox>
-        <br />
-        <br />
-        <asp:Label ID="lblPhoneNumber" runat="server" Text="Phone Number* :"></asp:Label>
-        <asp:TextBox ID="txtPhoneNumber" runat="server" Width="350px"></asp:TextBox>
-        <br />
-        <br />
-        <asp:Label ID="lblGetInTouch" runat="server" Text="Please specify what you would like to get in touch about :"></asp:Label>
-        <asp:DropDownList ID="DropDownList1" runat="server" Width="150px">
-            <asp:ListItem>----</asp:ListItem>
-            <asp:ListItem>Operating Hours</asp:ListItem>
-            <asp:ListItem>Careers</asp:ListItem>
-            <asp:ListItem>Vacancies</asp:ListItem>
-            <asp:ListItem>General Enquiry</asp:ListItem>
-            <asp:ListItem>Other</asp:ListItem>
-        </asp:DropDownList>
-        <br />
-        <br />
-        <asp:Label ID="lblMessage" runat="server" Text="Message* :"></asp:Label>
-        <asp:TextBox ID="txtMessage" runat="server" Width="700px" Height="50px"></asp:TextBox>
-        <br />
-        <br />
-        <asp:CheckBox ID="SignatureCheckBox" runat="server" />
-        <asp:Label ID="lblCheck" runat="server" Text="I agree to share my information and understand that it will be used by Que-Care's Privacy Policy"></asp:Label>
-        <br />
-        <br />
-        <asp:Button ID="btnSubmit" runat="server" Text="Submit" Width="100px" Height="40px" />
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
+    <div class="header" style="border-style: solid; border-width: medium; background-color: deepskyblue; border-color: white">
+        <h1 class="text-center">Get assistance</h1>
     </div>
+
+    <br />
+    <br />
+
+    <div class="container" style="text-align:center">
+        <img src="Images/ContactUs.jpg" style="width: 1050px; height: 250px" />
+    </div>
+
+    <br />
+    <br />
+
+    <h1 class="text-center">How can we help?</h1>
+
+    <br />
+    <br />
+
+
+    <div class="container" width="100%">
+    <div class="container" style="height: 190px; float: right; width: 30%; background-color: Highlight">
+        <h1>Call us</h1>
+        <br />
+        <h5>(+27)40 878 2222</h5>
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+    </div>
+
+    <div class="container" style="height: 190px; float: right; width: 40%; background-color: deepskyblue">
+        <h1>Meet with us</h1>
+        <br />
+        <h5>25 Oxford Rd</h5>
+        <h5>East London, 5201</h5>
+        <br />
+        <br />
+
+    </div>
+
+        <div class="container" style="height: 190px; float: left; width: 30%; background-color: Highlight">
+        <h1>Email us</h1>
+        <br />
+        <h5>info@que-care.com</h5>
+        <br />
+        <br />
+        <br />
+    </div>
+
+        </div>
     <br />
     <br />
     <br />
