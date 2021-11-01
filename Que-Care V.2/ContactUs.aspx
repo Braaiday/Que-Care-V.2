@@ -24,16 +24,18 @@
 
 
     <div class="container" width="100%">
-    <div class="container" style="height: 190px; float: left; width: 50%; background-color: Highlight">
+    <div class="container" style="height: 190px; float: right; width: 30%; background-color: Highlight">
         <h1>Call us</h1>
         <br />
         <h5>(+27)40 878 2222</h5>
         <br />
         <br />
         <br />
+        <br />
+        <br />
     </div>
 
-    <div class="container" style="height: 190px; float: right; width: 50%; background-color: deepskyblue">
+    <div class="container" style="height: 190px; float: right; width: 40%; background-color: deepskyblue">
         <h1>Meet with us</h1>
         <br />
         <h5>25 Oxford Rd</h5>
@@ -42,6 +44,16 @@
         <br />
 
     </div>
+
+        <div class="container" style="height: 190px; float: left; width: 30%; background-color: Highlight">
+        <h1>Email us</h1>
+        <br />
+        <h5>info@que-care.com</h5>
+        <br />
+        <br />
+        <br />
+    </div>
+
         </div>
     <br />
     <br />
