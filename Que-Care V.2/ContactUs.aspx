@@ -11,7 +11,7 @@
     <br />
 
     <div class="container" style="text-align:center">
-        <img src="Images/ContactUs.jpg" style="width: 1050px; height: 250px" />
+        <img src="Images/ContactUs.jpg" style="width: 40rem ; height: 250px" />
     </div>
 
     <br />
@@ -55,6 +55,41 @@
     </div>
 
         </div>
+
+    
+    <center>
+    <table>
+        <tr>
+            <th>
+                <div class="card text-white bg-primary mb-3" style="max-width: 20rem; margin: 30px">
+                  <div class="card-header" style="text-align: center;font-size:30px">Email us</div>
+                  <div class="card-body">
+                    <h4 class="card-title">Primary card title</h4>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  </div>
+                </div>
+            </th>
+            <th>
+                <div class="card text-white bg-secondary mb-3" style="max-width: 20rem; margin: 30px">
+                  <div class="card-header" style="text-align: center;font-size:30px">Meet with us</div>
+                  <div class="card-body">
+                    <h4 class="card-title">Secondary card title</h4>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  </div>
+                </div>
+            </th>
+            <th>
+                <div class="card text-white bg-primary mb-3" style="max-width: 20rem; margin: 30px">
+                  <div class="card-header" style="text-align: center;font-size:30px">Call us</div>
+                  <div class="card-body">
+                    <h4 class="card-title">Primary card title</h4>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  </div>
+                </div>
+            </th>
+        </tr>
+    </table>
+    </center>
     <br />
     <br />
     <br />
