@@ -128,10 +128,10 @@ tr:nth-child(even) {
                             <td runat="server">
                                 <table id="itemPlaceholderContainer" runat="server" border="1" style="background-color: #FFFFFF;border-collapse: collapse;border-color: #999999;border-style:none;border-width:1px;font-family: Verdana, Arial, Helvetica, sans-serif;">
                                     <tr runat="server" style="background-color: #E0FFFF;color: #333333;">
-                                        <th runat="server">P_Name</th>
+                                        <th runat="server">Name</th>
                                         <th runat="server">Symptoms</th>
-                                        <th runat="server">Ticket_Date</th>
-                                        <th runat="server">Ticket_Time</th>
+                                        <th runat="server">Date</th>
+                                        <th runat="server">Time</th>
                                     </tr>
                                     <tr id="itemPlaceholder" runat="server">
                                     </tr>
