@@ -12,53 +12,58 @@ public partial class _Default : System.Web.UI.Page
     
     protected void Page_Load(object sender, EventArgs e)
     {
-        ValidationSettings.UnobtrusiveValidationMode = UnobtrusiveValidationMode.None;
-        ///Creating Connection to database
-        string connection = ConfigurationManager.ConnectionStrings["QueCareConnectionString"].ConnectionString;
-        SqlConnection conn = new SqlConnection(connection);
-        conn.Open();
-
-        ///Getting Patient Name
-        string username = Session["Username"].ToString();
-        string patname = "";
-        string getNamepat = "select P_Name from Patient where P_UserName =" + " '" + username + "'";
-        SqlCommand SQLname = new SqlCommand(getNamepat, conn);
-        using (SqlDataReader dr = SQLname.ExecuteReader())
+        if (!IsPostBack)
         {
-            while (dr.Read())
-            {
-                patname = dr[0].ToString();
-            }
-        }
-        Label6.Text = patname;
-        ///
-        ///Getting all the doctors from the database and adding them to the drop down list.
-        string doctorcount = "select count(*) from Doctor";
-        SqlCommand CountDoctors = new SqlCommand(doctorcount, conn);
-        using (SqlDataReader dr1 = CountDoctors.ExecuteReader())
-        {
-            int size = 0;
-            while (dr1.Read())
-            {
-                size = int.Parse(dr1[0].ToString());
+            DropDownList1.Items.Clear();
+            ValidationSettings.UnobtrusiveValidationMode = UnobtrusiveValidationMode.None;
+            ///Creating Connection to database
+            string connection = ConfigurationManager.ConnectionStrings["QueCareConnectionString"].ConnectionString;
+            SqlConnection conn = new SqlConnection(connection);
+            conn.Open();
 
-            }
-            
-            for (int i = 1; i <= size; i++ )
+            ///Getting Patient Name
+            string username = Session["Username"].ToString();
+            string patname = "";
+            string getNamepat = "select P_Name from Patient where P_UserName =" + " '" + username + "'";
+            SqlCommand SQLname = new SqlCommand(getNamepat, conn);
+            using (SqlDataReader dr = SQLname.ExecuteReader())
             {
-                string getName = "select Doc_Name from Doctor where Doc_ID= '" + i + "'";
-                SqlCommand name = new SqlCommand(getName, conn);
-                using (SqlDataReader dr2 = name.ExecuteReader())
+                while (dr.Read())
                 {
-                    while (dr2.Read())
-                    {
-                        DropDownList1.Items.Add(dr2[0].ToString());
-                    }
-                    
+                    patname = dr[0].ToString();
                 }
             }
+            Label6.Text = patname;
+            ///
+            ///Getting all the doctors from the database and adding them to the drop down list.
+            string doctorcount = "select count(*) from Doctor";
+            SqlCommand CountDoctors = new SqlCommand(doctorcount, conn);
+            using (SqlDataReader dr1 = CountDoctors.ExecuteReader())
+            {
+                int size = 0;
+                while (dr1.Read())
+                {
+                    size = int.Parse(dr1[0].ToString());
+
+                }
+
+                for (int i = 1; i <= size; i++)
+                {
+                    string getName = "select Doc_Name from Doctor where Doc_ID= '" + i + "'";
+                    SqlCommand name = new SqlCommand(getName, conn);
+                    using (SqlDataReader dr2 = name.ExecuteReader())
+                    {
+                        while (dr2.Read())
+                        {
+                            DropDownList1.Items.Add(dr2[0].ToString());
+                        }
+
+                    }
+                }
+            }
+            conn.Close();
         }
-        conn.Close();
+        
     }
 
 
@@ -129,21 +134,23 @@ public partial class _Default : System.Web.UI.Page
             }
 
             //Getting Ticket Count and adding plus 1 for getting ID for new ticket
-            int Ticket_ID = 0;
-            string getTicketCount = "select count(*) from VirtualTicket";
-            SqlCommand getticketcount = new SqlCommand(getTicketCount, conn);
-            using (SqlDataReader dr = getticketcount.ExecuteReader())
-            {
-                while (dr.Read())
-                {
-                    Ticket_ID = int.Parse(dr[0].ToString()) + 1;
-                }
-            }
+
+            //int Ticket_ID = 0;
+            //string getTicketCount = "select count(*) from VirtualTicket";
+            //SqlCommand getticketcount = new SqlCommand(getTicketCount, conn);
+            //using (SqlDataReader dr = getticketcount.ExecuteReader())
+            //{
+            //    while (dr.Read())
+            //    {
+            //        Ticket_ID = int.Parse(dr[0].ToString()) + 1;
+            //    }
+            //}
+
             ///Code for adding ticket to database
 
             string query = "Insert into VirtualTicket(Ticket_ID,Ticket_Time,Ticket_Date,Symptoms,P_ID,Recept_ID,Doc_ID)Values(@Ticket_ID,@Ticket_Time,@Ticket_Date,@Symptoms,@P_ID,@Recept_ID,@Doc_ID)";
             SqlCommand command = new SqlCommand(query, conn);
-            command.Parameters.AddWithValue("Ticket_ID", Ticket_ID);
+            command.Parameters.AddWithValue("Ticket_ID", P_ID);
             command.Parameters.AddWithValue("Ticket_Time", time);
             command.Parameters.AddWithValue("Ticket_Date", Date);
             command.Parameters.AddWithValue("Symptoms", symptoms);

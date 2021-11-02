@@ -68,7 +68,7 @@
                                          <th>
                                              <div style="max-height: 10rem; max-height: 10rem; text-align:center">
                                                  <h3>User Split</h3>
-                                                <canvas id="myChart1" ></canvas>
+                                                <canvas id="myChart1"></canvas>
                                             </div>
                                          </th>
                                          <th>
@@ -105,6 +105,18 @@
                                         ],
                                         borderWidth: 0
                                     }]
+                                },
+                                options: {
+                                    plugins: {
+                                        legend: {
+                                            labels: {
+                                                color: "white",
+                                                font: {
+                                                    size: 18
+                                                }
+                                            }
+                                        }
+                                    }
                                 }
                             });
 
@@ -122,6 +134,18 @@
                                         ],
                                         borderWidth: 0
                                     }]
+                                },
+                                options: {
+                                    plugins: {
+                                        legend: {
+                                            labels: {
+                                                color: "white",
+                                                font: {
+                                                    size: 18
+                                                }
+                                            }
+                                        }
+                                    }
                                 }
                             });
                         </script>
