@@ -5,6 +5,7 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
     <br />
     <br />
+    <center>
     <div class="container">
         <div class="row cold-md-6 cold-md-offset-3">
             <div class="card card-primary">
@@ -106,6 +107,7 @@
             </div>
         </div>
     </div>
+    </center>
     <br />
 </asp:Content>
 
