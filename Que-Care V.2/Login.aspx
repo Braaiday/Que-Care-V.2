@@ -36,7 +36,7 @@
                         Not yet registered? No worries!
                         <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/Register.aspx">Register</asp:HyperLink>.
                         Forgot password?
-                        <asp:HyperLink ID="HyperLink2" runat="server" NavigateUrl="~/CreateNewPassword.aspx">Create new password</asp:HyperLink>.
+                        <asp:HyperLink ID="HyperLink2" runat="server" NavigateUrl="~/RequestPassword.aspx">Request your login details.</asp:HyperLink>.
                     </p>
                     
             </div>
