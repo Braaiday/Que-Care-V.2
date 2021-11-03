@@ -52,10 +52,10 @@ tr:nth-child(even) {
                             <asp:Label ID="SymptomsLabel" runat="server" Text='<%# Eval("Symptoms") %>' />
                         </td>
                         <td>
-                            <asp:Label ID="Ticket_DateLabel" runat="server" Text='<%# Eval("Ticket_Date") %>' />
+                            <asp:Label ID="Ticket_DateLabel" runat="server" Text='<%# Eval("Ticket_Date").ToString().Substring(0,10) %>' />
                         </td>
                         <td>
-                            <asp:Label ID="Ticket_TimeLabel" runat="server" Text='<%# Eval("Ticket_Time") %>' />
+                            <asp:Label ID="Ticket_TimeLabel" runat="server" Text='<%# Eval("Ticket_Time").ToString().Substring(11,8) %>' />
                         </td>
                     </tr>
                 </AlternatingItemTemplate>

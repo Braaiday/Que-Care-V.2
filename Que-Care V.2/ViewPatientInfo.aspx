@@ -56,171 +56,100 @@
     </div>
     <div class="row">
          <div class="col">
-             <asp:ListView ID="ListView1" runat="server">
-                 <AlternatingItemTemplate>
-                     <li style="background-color: #FFFFFF;color: #284775;">P_Name:
-                         <asp:Label ID="P_NameLabel" runat="server" Text='<%# Eval("P_Name") %>' />
-                         <br />
-                         P_Surname:
-                         <asp:Label ID="P_SurnameLabel" runat="server" Text='<%# Eval("P_Surname") %>' />
-                         <br />
-                         P_StreetAddress:
-                         <asp:Label ID="P_StreetAddressLabel" runat="server" Text='<%# Eval("P_StreetAddress") %>' />
-                         <br />
-                         P_City:
-                         <asp:Label ID="P_CityLabel" runat="server" Text='<%# Eval("P_City") %>' />
-                         <br />
-                         P_Province:
-                         <asp:Label ID="P_ProvinceLabel" runat="server" Text='<%# Eval("P_Province") %>' />
-                         <br />
-                         P_Sex:
-                         <asp:Label ID="P_SexLabel" runat="server" Text='<%# Eval("P_Sex") %>' />
-                         <br />
-                         P_DOB:
-                         <asp:Label ID="P_DOBLabel" runat="server" Text='<%# Eval("P_DOB") %>' />
-                         <br />
-                         P_CellNumber:
-                         <asp:Label ID="P_CellNumberLabel" runat="server" Text='<%# Eval("P_CellNumber") %>' />
-                         <br />
-                         P_Email:
-                         <asp:Label ID="P_EmailLabel" runat="server" Text='<%# Eval("P_Email") %>' />
-                         <br />
-                     </li>
-                 </AlternatingItemTemplate>
-                 <EditItemTemplate>
-                     <li style="background-color: #999999;">P_Name:
-                         <asp:TextBox ID="P_NameTextBox" runat="server" Text='<%# Bind("P_Name") %>' />
-                         <br />
-                         P_Surname:
-                         <asp:TextBox ID="P_SurnameTextBox" runat="server" Text='<%# Bind("P_Surname") %>' />
-                         <br />
-                         P_StreetAddress:
-                         <asp:TextBox ID="P_StreetAddressTextBox" runat="server" Text='<%# Bind("P_StreetAddress") %>' />
-                         <br />
-                         P_City:
-                         <asp:TextBox ID="P_CityTextBox" runat="server" Text='<%# Bind("P_City") %>' />
-                         <br />
-                         P_Province:
-                         <asp:TextBox ID="P_ProvinceTextBox" runat="server" Text='<%# Bind("P_Province") %>' />
-                         <br />
-                         P_Sex:
-                         <asp:TextBox ID="P_SexTextBox" runat="server" Text='<%# Bind("P_Sex") %>' />
-                         <br />
-                         P_DOB:
-                         <asp:TextBox ID="P_DOBTextBox" runat="server" Text='<%# Bind("P_DOB") %>' />
-                         <br />
-                         P_CellNumber:
-                         <asp:TextBox ID="P_CellNumberTextBox" runat="server" Text='<%# Bind("P_CellNumber") %>' />
-                         <br />
-                         P_Email:
-                         <asp:TextBox ID="P_EmailTextBox" runat="server" Text='<%# Bind("P_Email") %>' />
-                         <br />
-                         <asp:Button ID="UpdateButton" runat="server" CommandName="Update" Text="Update" />
-                         <asp:Button ID="CancelButton" runat="server" CommandName="Cancel" Text="Cancel" />
-                     </li>
-                 </EditItemTemplate>
-                 <EmptyDataTemplate>
-                     No data was returned.
-                 </EmptyDataTemplate>
-                 <InsertItemTemplate>
-                     <li style="">P_Name:
-                         <asp:TextBox ID="P_NameTextBox" runat="server" Text='<%# Bind("P_Name") %>' />
-                         <br />P_Surname:
-                         <asp:TextBox ID="P_SurnameTextBox" runat="server" Text='<%# Bind("P_Surname") %>' />
-                         <br />P_StreetAddress:
-                         <asp:TextBox ID="P_StreetAddressTextBox" runat="server" Text='<%# Bind("P_StreetAddress") %>' />
-                         <br />P_City:
-                         <asp:TextBox ID="P_CityTextBox" runat="server" Text='<%# Bind("P_City") %>' />
-                         <br />P_Province:
-                         <asp:TextBox ID="P_ProvinceTextBox" runat="server" Text='<%# Bind("P_Province") %>' />
-                         <br />P_Sex:
-                         <asp:TextBox ID="P_SexTextBox" runat="server" Text='<%# Bind("P_Sex") %>' />
-                         <br />P_DOB:
-                         <asp:TextBox ID="P_DOBTextBox" runat="server" Text='<%# Bind("P_DOB") %>' />
-                         <br />P_CellNumber:
-                         <asp:TextBox ID="P_CellNumberTextBox" runat="server" Text='<%# Bind("P_CellNumber") %>' />
-                         <br />P_Email:
-                         <asp:TextBox ID="P_EmailTextBox" runat="server" Text='<%# Bind("P_Email") %>' />
-                         <br />
-                         <asp:Button ID="InsertButton" runat="server" CommandName="Insert" Text="Insert" />
-                         <asp:Button ID="CancelButton" runat="server" CommandName="Cancel" Text="Clear" />
-                     </li>
-                 </InsertItemTemplate>
-                 <ItemSeparatorTemplate>
-<br />
-                 </ItemSeparatorTemplate>
-                 <ItemTemplate>
-                     <li style="background-color: #E0FFFF;color: #333333;">P_Name:
-                         <asp:Label ID="P_NameLabel" runat="server" Text='<%# Eval("P_Name") %>' />
-                         <br />
-                         P_Surname:
-                         <asp:Label ID="P_SurnameLabel" runat="server" Text='<%# Eval("P_Surname") %>' />
-                         <br />
-                         P_StreetAddress:
-                         <asp:Label ID="P_StreetAddressLabel" runat="server" Text='<%# Eval("P_StreetAddress") %>' />
-                         <br />
-                         P_City:
-                         <asp:Label ID="P_CityLabel" runat="server" Text='<%# Eval("P_City") %>' />
-                         <br />
-                         P_Province:
-                         <asp:Label ID="P_ProvinceLabel" runat="server" Text='<%# Eval("P_Province") %>' />
-                         <br />
-                         P_Sex:
-                         <asp:Label ID="P_SexLabel" runat="server" Text='<%# Eval("P_Sex") %>' />
-                         <br />
-                         P_DOB:
-                         <asp:Label ID="P_DOBLabel" runat="server" Text='<%# Eval("P_DOB") %>' />
-                         <br />
-                         P_CellNumber:
-                         <asp:Label ID="P_CellNumberLabel" runat="server" Text='<%# Eval("P_CellNumber") %>' />
-                         <br />
-                         P_Email:
-                         <asp:Label ID="P_EmailLabel" runat="server" Text='<%# Eval("P_Email") %>' />
-                         <br />
-                     </li>
-                 </ItemTemplate>
-                 <LayoutTemplate>
-                     <ul id="itemPlaceholderContainer" runat="server" style="font-family: Verdana, Arial, Helvetica, sans-serif;">
-                         <li runat="server" id="itemPlaceholder" />
-                     </ul>
-                     <div style="text-align: center;background-color: #5D7B9D;font-family: Verdana, Arial, Helvetica, sans-serif;color: #FFFFFF;">
-                     </div>
-                 </LayoutTemplate>
-                 <SelectedItemTemplate>
-                     <li style="background-color: #E2DED6;font-weight: bold;color: #333333;">P_Name:
-                         <asp:Label ID="P_NameLabel" runat="server" Text='<%# Eval("P_Name") %>' />
-                         <br />
-                         P_Surname:
-                         <asp:Label ID="P_SurnameLabel" runat="server" Text='<%# Eval("P_Surname") %>' />
-                         <br />
-                         P_StreetAddress:
-                         <asp:Label ID="P_StreetAddressLabel" runat="server" Text='<%# Eval("P_StreetAddress") %>' />
-                         <br />
-                         P_City:
-                         <asp:Label ID="P_CityLabel" runat="server" Text='<%# Eval("P_City") %>' />
-                         <br />
-                         P_Province:
-                         <asp:Label ID="P_ProvinceLabel" runat="server" Text='<%# Eval("P_Province") %>' />
-                         <br />
-                         P_Sex:
-                         <asp:Label ID="P_SexLabel" runat="server" Text='<%# Eval("P_Sex") %>' />
-                         <br />
-                         P_DOB:
-                         <asp:Label ID="P_DOBLabel" runat="server" Text='<%# Eval("P_DOB") %>' />
-                         <br />
-                         P_CellNumber:
-                         <asp:Label ID="P_CellNumberLabel" runat="server" Text='<%# Eval("P_CellNumber") %>' />
-                         <br />
-                         P_Email:
-                         <asp:Label ID="P_EmailLabel" runat="server" Text='<%# Eval("P_Email") %>' />
-                         <br />
-                     </li>
-                 </SelectedItemTemplate>
-             </asp:ListView>
-                
+             <div class="card text-white bg-secondary mb-3" style="max-width: 40rem;" runat="server" id="patdetails" visible="false">
+              <div class="card-header">Patient Details</div>
+              <div class="card-body">
+                <h4 class="card-title">Here is the patient Info</h4>
+                <table class="table-active">
+                    <tr>
+                        <th>
+                            Name:
+                        </th>
+                        <th>
+                            <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label>
+                        </th>
+                    </tr>
+                    <tr>
+                        <th>
+                            Surname:
+                        </th>
+                        <th>
+                            <asp:Label ID="Label2" runat="server" Text="Label"></asp:Label>
+                        </th>
+                    </tr>
+                    <tr>
+                        <th>
+                            Street Address:
+                        </th>
+                        <th>
+                            <asp:Label ID="Label3" runat="server" Text="Label"></asp:Label>
+                        </th>
+                    </tr>
+                    <tr>
+                        <th>
+                            City:
+                        </th>
+                        <th>
+                            <asp:Label ID="Label4" runat="server" Text="Label"></asp:Label>
+                        </th>
+                    </tr>
+                    <tr>
+                        <th>
+                            Province:
+                        </th>
+                        <th>
+                            <asp:Label ID="Label5" runat="server" Text="Label"></asp:Label>
+                        </th>
+                    </tr>
+                    <tr>
+                        <th>
+                            Gender:
+                        </th>
+                        <th>
+                            <asp:Label ID="Label6" runat="server" Text="Label"></asp:Label>
+                        </th>
+                    </tr>
+                    <tr>
+                        <th>
+                            DOB:
+                        </th>
+                        <th>
+                            <asp:Label ID="Label7" runat="server" Text="Label"></asp:Label>
+                        </th>
+                    </tr>
+                    <tr>
+                        <th>
+                            Cell Number:
+                        </th>
+                        <th>
+                            <asp:Label ID="Label8" runat="server" Text="Label"></asp:Label>
+                        </th>
+                    </tr>
+                    <tr>
+                        <th>
+                            Email:
+                        </th>
+                        <th>
+                            <asp:Label ID="Label9" runat="server" Text="Label"></asp:Label>
+                        </th>
+                    </tr>
+                </table>
+              </div>
+            </div>
+
+
+
          </div>
     </div>
+            <div class="row">
+                <div class="col">
+                    <div class="alert alert-dismissible alert-danger" runat="server" visible="false" id="nopat">
+                      <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+                      <strong>Oh snap!</strong> <a href="#" class="alert-link">Patient does not exist,</a> try submitting again.
+                    </div>
+                </div>
             </div>
+  </div>
     </div>
 </div>
   </center>
@@ -234,11 +163,7 @@
     <br />
     <br />
     <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
+
 </asp:Content>
     
 

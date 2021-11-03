@@ -24,7 +24,7 @@
     <br />
 
     <center>
-        <table class="table" style="height:250px; width:80rem">
+        <table class="table" style="height:280px; width:80rem">
             <tr>
                 <th>
                     <div class="card text-white bg-primary mb-3" style="max-width: 30rem; height:170px; margin: 30px">
@@ -56,9 +56,5 @@
             </tr>
         </table>
     </center>
-    <br />
-    <br />
-    <br />
-    <br />
 </asp:Content>
 

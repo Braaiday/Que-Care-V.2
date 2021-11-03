@@ -9,8 +9,9 @@
         <div class="card text-white bg-secondary mb-3" style="max-width: 70rem;">
           <div class="card-header"><h1>Doctor Page</h1></div>
           <div class="card-body">
-            <asp:Label ID="Label3" runat="server" Text="Welcome " CssClass="text-lg-center"></asp:Label>
-              <asp:Label ID="Label2" runat="server" Text="Label"></asp:Label>
+            <asp:Label ID="Label3" runat="server" Text="Welcome " Font-Size="X-Large" CssClass="text-lg-center"></asp:Label>
+              <asp:Label ID="Label2" runat="server" Font-Size="X-Large" Text="Label"></asp:Label>
+              
               <br />
                  <img src="Images/DrLanding.png"/>
                 <br />
