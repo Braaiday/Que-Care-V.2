@@ -7,6 +7,7 @@
     <center>
         <br />
         <br />
+        <h1>What we are all about!</h1>
         <br />
         <br />
           <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel" style="width: 60rem; max-width: 50rem; max-height: 40rem">

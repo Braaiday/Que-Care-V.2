@@ -22,7 +22,7 @@
     <form id="form1" runat="server">
         <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
           <div class="container-fluid">
-            <a class="navbar-brand" href="#"><img style="height: 50px; width: 50px" src="Images/bandaids.png" />Que-Care</a>
+            <a class="navbar-brand" href="Home Page.aspx"><img style="height: 40px; width: 197px" src="Images/bandaids.png" /></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
             </button>
@@ -60,7 +60,7 @@
                     <div class="row">
                     <div class="col-xs-12 col-sm-6 col-md-3">
                     <div class="widget subscribe no-box">
-                    <h5 class="widget-title"><img style="height: 50px; width: 50px" src="Images/bandaids.png" />Que-Care<span></span></h5>
+                    <h5 class="widget-title"><a href="Home Page.aspx"><img style="height: 30px; width: 147px" src="Images/bandaids.png" /></a><span></span></h5>
                     <p>Your all in one stop for booking appointments.</p>
                     </div>
                     </div>
