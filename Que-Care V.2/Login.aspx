@@ -7,10 +7,10 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
     <br />
     <br />
-    <div class="container" style="margin-left: 33%; margin-top: 20px; margin-bottom: 20px; width: 500px">
-        <div class="card">
+    <center>
+        <div class="card" style="max-width: 30rem; min-height: 14em; margin: 20px;">
             <div class="card-body justify-content-center">
-                 <h1>Login</h1>
+                 <h1 style="text-align: left">Login</h1>
                     <hr />
                     <br />
                     <br />
@@ -40,8 +40,11 @@
                     </p>
                     
             </div>
+             <div class="card-footer text-right" style="text-align:left">
+                        &copy; Que-Care
+             </div>
         </div>
-    </div>
+        </center>
     <br />
     <br />
     <br />    

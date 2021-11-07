@@ -1,5 +1,4 @@
 ﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
-
 <!DOCTYPE html>
 
 <html>
@@ -56,70 +55,70 @@
                         <hr style="width: 90%;"/>
                     </center>
                     <div class="main-footer widgets-dark typo-light">
-                    <div class="container">
-                    <div class="row">
-                    <div class="col-xs-12 col-sm-6 col-md-3">
-                    <div class="widget subscribe no-box">
-                    <h5 class="widget-title"><a href="Home Page.aspx"><img style="height: 30px; width: 147px" src="Images/bandaids.png" /></a><span></span></h5>
-                    <p>Your all in one stop for booking appointments.</p>
-                    </div>
-                    </div>
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-xs-12 col-sm-6 col-md-3">
+                                    <div class="widget subscribe no-box">
+                                        <h5 class="widget-title"><a href="Home Page.aspx"><img style="height: 30px; width: 147px" src="Images/bandaids.png" /></a><span></span></h5>
+                                        <p>Your all in one stop for booking appointments.</p>
+                                    </div>
+                                </div>
 
-                    <div class="col-xs-12 col-sm-6 col-md-3">
-                    <div class="widget no-box">
-                    <h5 class="widget-title">Quick Links<span></span></h5>
-                    <ul class="thumbnail-widget">
-                    <li>
-                    <div class="thumb-content"><a href="Home Page.aspx">Home</a></div> 
-                    </li>
-                    <li>
-                    <div class="thumb-content"><a href="About.aspx">About</a></div> 
-                    </li>
-                    <li>
-                    <div class="thumb-content"><a href="ContactUs.aspx">Contact</a></div> 
-                    </li>
-                    <li>
-                    <div class="thumb-content"><a href="Login.aspx">Login</a></div> 
-                    </li>
+                                <div class="col-xs-12 col-sm-6 col-md-3">
+                                    <div class="widget no-box">
+                                        <h5 class="widget-title">Quick Links<span></span></h5>
+                                        <ul class="thumbnail-widget">
+                                            <li>
+                                                <div class="thumb-content"><a href="Home Page.aspx">Home</a></div> 
+                                            </li>
+                                            <li>
+                                                <div class="thumb-content"><a href="About.aspx">About</a></div> 
+                                            </li>
+                                            <li>
+                                                <div class="thumb-content"><a href="ContactUs.aspx">Contact</a></div> 
+                                            </li>
+                                            <li>
+                                                <div class="thumb-content"><a href="Login.aspx">Login</a></div> 
+                                            </li>
                      
-                    </ul>
-                    </div>
-                    </div>
+                                        </ul>
+                                 </div>
+                             </div>
 
-                    <div class="col-xs-12 col-sm-6 col-md-3">
-                    <div class="widget no-box">
-                    <h5 class="widget-title">Get Started<span></span></h5>
-                    <p>Get access to our ticketing system.</p>
-                    <a class="btn btn-primary" href="Register.aspx" target="_blank">Register Now</a>
-                    </div>
-                    </div>
+                             <div class="col-xs-12 col-sm-6 col-md-3">
+                                <div class="widget no-box">
+                                    <h5 class="widget-title">Get Started<span></span></h5>
+                                    <p>Get access to our ticketing system.</p>
+                                    <a class="btn btn-primary" href="Register.aspx" target="_blank">Register Now</a>
+                                </div>
+                            </div>
 
-                    <div class="col-xs-12 col-sm-6 col-md-3">
+                            <div class="col-xs-12 col-sm-6 col-md-3">
 
-                    <div class="widget no-box">
-                    <h5 class="widget-title">Contact Us<span></span></h5>
+                            <div class="widget no-box">
+                                    <h5 class="widget-title">Contact Us<span></span></h5>
 
-                    <p>Important Numbers</p>
-                    <ul class="social-footer2" style="list-style: none">
-                        <li><p>Emergency : <span style="text-decoration: underline; color: lightblue">112</span></p></li>
-                        <li><p>Ambulance : <span style="text-decoration: underline; color: lightblue">10177</span></p></li>
-                        <li><p>Enquiry : <span style="text-decoration: underline; color: lightblue">43955</span></p></li>
-                    </ul>
-                    </div>
-                    </div>
+                                    <p>Important Numbers</p>
+                                    <ul class="social-footer2" style="list-style: none">
+                                        <li><p>Emergency : <span style="text-decoration: underline; color: lightblue">112</span></p></li>
+                                        <li><p>Ambulance : <span style="text-decoration: underline; color: lightblue">10177</span></p></li>
+                                        <li><p>Enquiry : <span style="text-decoration: underline; color: lightblue">43955</span></p></li>
+                                    </ul>
+                                </div>
+                            </div>
 
-                    </div>
+                        </div>
                     </div>
                     </div>
   
                     <div class="footer-copyright">
-                    <div class="container">
-                    <div class="row">
-                    <div class="col-md-12 text-center">
-                    <p>Copyright Innovation Developers © 2021. All rights reserved.</p>
-                    </div>
-                    </div>
-                    </div>
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-md-12 text-center">
+                                    <p>Copyright Innovation Developers © 2021. All rights reserved.</p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                    </footer>
        

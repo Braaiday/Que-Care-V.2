@@ -3,32 +3,61 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
-    <div class="card text-white bg-primary mb-3" style="max-width: 60rem; min-height: 30em; margin: 20px;">
+                        <center>
+                        <div class="card text-white bg-secondary mb-3" style="max-width: 90rem; min-height: 45em; margin: 20px;">
                             <div class="card-header">Reports</div>
                              <div class="card-body">
                                  <h4 class="card-title">Here are some statistics</h4>
+                                 <br />
+                                 <br />
+                                 <br />
                                  <table>
                                      <tr>
                                          <th>
-                                             <div style="max-height: 10rem; max-height: 10rem; text-align:center">
-                                                 <h3>User Split</h3>
-                                                <canvas id="myChart1"></canvas>
+                                             <div class="card text-white bg-primary mb-3" style="max-width: 20rem; min-height: 30rem">
+                                              <div class="card-header" style="text-align: center">User Split</div>
+                                              <div class="card-body">
+                                                <div style="max-height: 10rem; max-height: 10rem; text-align:center">                                                
+                                                     <canvas id="myChart1"></canvas>
+                                                </div>   
+                                              </div>
                                             </div>
+                                             
                                          </th>
                                          <th>
-                                             <div style="max-height: 10rem; max-height: 10rem; text-align:center">
-                                                 <h3>Tickets VS Patients</h3>
-                                                <canvas id="myChart2" ></canvas>
+                                             <div class="card text-white bg-primary mb-3" style="max-width: 20rem;min-height: 30rem">
+                                              <div class="card-header" style="text-align: center">Tickets VS Patients</div>
+                                              <div class="card-body">
+                                                <div style="max-height: 10rem; max-height: 10rem; text-align:center">                                                
+                                                     <canvas id="myChart2"></canvas>
+                                                </div>   
+                                              </div>
                                             </div>
                                          </th>
                                          <th>
 
                                          </th>
-                                     </tr>
+                                                                    
+                                         <th>
+                                             <div class="card text-white bg-primary mb-3" style="max-width: 20rem; min-height: 30rem">
+                                              <div class="card-header" style="text-align: center">Doctors and their departments.</div>
+                                              <div class="card-body">
+                                                <div style="max-height: 10rem; max-height: 10rem; text-align:center">                                                
+                                                     <canvas id="myChart3"></canvas>
+                                                </div>   
+                                              </div>
+                                            </div>                                           
+                                         </th>
+                                         </tr>  
                                  </table>
                              </div>
                         </div>
-     <!--Chart.js -->
+                            </center>
+    
+
+                       
+                           
+                         <!--Chart.js -->
                         <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
                         <!--config/setup -->
                         <script>
@@ -91,6 +120,50 @@
                                     }
                                 }
                             });
+
+
+
+                            const ctx3 = document.getElementById('myChart3').getContext('2d');
+                            const myChart3 = new Chart(ctx3, {
+                                type: 'bar',
+                                data: {
+                                    labels: ['Denistry', 'Optometrist', 'Cardiology','Urology'],
+                                    datasets: [{
+                                        label: 'Departments VS Doctors',
+                                        data: [<%=Denistry%>, <%=Optometrist%>, <%=Cardiology%>, <%=Urology%>],
+                                        backgroundColor: [
+                                            'rgba(255, 99, 132, 0.2)',
+                                            'rgba(178, 54, 255, 0.2)',
+                                            'rgba(255, 206, 86, 0.2)',
+                                            'rgba(75, 192, 192, 0.2)'
+                                            
+                                        ],
+                                        borderColor: [
+                                            'rgba(255, 99, 132, 1)',
+                                            'rgba(157, 0, 255, 1)',
+                                            'rgba(255, 206, 86, 1)',
+                                            'rgba(75, 192, 192, 1)'
+                                        ],
+                                        borderWidth: 1
+                                    }]
+                                },
+                                options: {
+                                    plugins: {
+                                        legend: {
+                                            labels: {
+                                                color: "white",
+                                                font: {
+                                                    size: 18
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            });
+
+
+
+      
                         </script>
 </asp:Content>
 
