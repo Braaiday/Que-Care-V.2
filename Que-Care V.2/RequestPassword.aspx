@@ -5,7 +5,7 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
     <div class="container" style="text-align: center">
         <br />
-        <h1>Please suppply your email addresss.</h1>
+        <h1>Please supply your email addresss.</h1>
         <br />
         <br />
         <asp:Label ID="lblUsername" runat="server" Text="Email :"></asp:Label>
